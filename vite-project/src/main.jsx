@@ -6,10 +6,30 @@ import './Styles/index.css'  //Fichier pour le style du html de base !
 
 // import App from "./App";
 import Home from "./Pages/Home"
+import Toiture from "./Pages/Toiture";
+import Isolation from "./Pages/Isolation";
+import Facade from "./Pages/Facade";
+import Devis from "./Pages/Devis";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/toiture",
+    element: <Toiture/>,
+  },
+  {
+    path: "/isolation",
+    element: <Isolation/>,
+  },
+  {
+    path: "/facade",
+    element: <Facade/>,
+  },
+  {
+    path: "/devis",
+    element: <Devis/>,
   },
 ]);
 

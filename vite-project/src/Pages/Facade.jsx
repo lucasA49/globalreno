@@ -1,11 +1,9 @@
-import Header from "../Composant/Header.jsx"
+import Navbar from "../Composant/Navbar.jsx";
 
-export default function Facade ()  
-{
+export default function Facade() {
   return (
-<>
-<Header/>
-</>
-  )
+    <>
+      <Navbar />
+    </>
+  );
 }
-

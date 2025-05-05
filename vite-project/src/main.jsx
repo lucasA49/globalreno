@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import './Styles/index.css'  //Fichier pour le style du html de base !
+import "./Styles/index.css"; //Fichier pour le style du html de base !
 
 // import App from "./App";
-import Home from "./Pages/Home"
+import Home from "./Pages/Home";
 import Toiture from "./Pages/Toiture";
 import Isolation from "./Pages/Isolation";
 import Facade from "./Pages/Facade";
@@ -17,19 +17,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/toiture",
-    element: <Toiture/>,
+    element: <Toiture />,
   },
   {
     path: "/isolation",
-    element: <Isolation/>,
+    element: <Isolation />,
   },
   {
     path: "/facade",
-    element: <Facade/>,
+    element: <Facade />,
   },
   {
     path: "/devis",
-    element: <Devis/>,
+    element: <Devis />,
   },
 ]);
 

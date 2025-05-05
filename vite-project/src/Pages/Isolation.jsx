@@ -1,6 +1,6 @@
 import Header from "../Composant/Header.jsx"
 
-export default function Home () 
+export default function Isolation ()  
 {
   return (
 <>
@@ -8,3 +8,4 @@ export default function Home ()
 </>
   )
 }
+

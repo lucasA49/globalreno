@@ -1,19 +1,66 @@
-import React, { useState } from "react";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import emailjs from 'emailjs-com';
+
+const schema = yup.object({
+  name: yup
+    .string()
+    .max(50)
+    .required("Merci de rentrer votre nom et prénom"),
+  email: yup
+    .string()
+    .email("Merci de rentrer une adresse mail valide")
+    .max(255),
+  phone: yup
+    .number()
+    .typeError("Merci de rentrer un numéro de téléphone valide")
+    .required("Merci de rentrer un numéro de téléphone"),
+  subject: yup
+    .string()
+    .required("Merci de sélectionner un sujet"),
+  message: yup
+    .string()
+    .required("Merci de rentrer un message")
+}).required();
 
 const ContactForm = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema)
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
+  const onSubmit = (data) => {
+    alert('😀 Merci pour votre message, il sera traité au plus vite 😀');
+    const templateId = 'template_8gcgdti';
+    const serviceId = 'service_ytmnquu';
 
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-    }).then(() => {
-      setIsSubmitted(true);
-      form.reset();
+    sendFeedback(serviceId, templateId, {
+      to_email: "lucas.ak49@hotmail.com",
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      subject: data.subject,
+      message: data.message,
     });
+
+    reset();
+  };
+
+  const sendFeedback = (serviceId, templateId, variables) => {
+    emailjs
+      .send(serviceId, templateId, variables, 'Qefwz8LeMgFGv424_')
+      .then(() => {
+        console.log('Succès');
+      })
+      .catch(() => {
+        console.error('Il y a une erreur');
+      });
   };
 
   return (
@@ -35,61 +82,60 @@ const ContactForm = () => {
         </div>
 
         {/* Formulaire */}
-        <form
-          action="https://fabform.io/f/xxxxx"
-          method="post"
-          onSubmit={handleSubmit}
-          className="space-y-4"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <input
             type="text"
             name="name"
             placeholder="Nom *"
-            required
             className="w-full border rounded-md px-4 py-2"
+            {...register("name")}
           />
-          <div className="form-group">
-            <input type="tel" id="phone" name="phone" required
+          {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+
+          <input
+            type="tel"
+            name="phone"
             placeholder="Numéro de téléphone *"
-               className="w-full border rounded-md px-4 py-2" />
-          </div>
+            className="w-full border rounded-md px-4 py-2"
+            {...register("phone")}
+          />
+          {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+
           <input
             type="email"
             name="email"
-            placeholder="Email "
+            placeholder="Email"
             className="w-full border rounded-md px-4 py-2"
+            {...register("email")}
           />
-      <select
-  name="subject"
-  required
-  className="w-full border rounded-md px-4 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
->
-  <option value="" disabled selected hidden>
-    Sujet *
-  </option>
-  <option value="contact">Contact</option>
-  <option value="devis">Demande de devis</option>
-</select>
+          {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+
+          <select
+            name="subject"
+            className="w-full border rounded-md px-4 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            {...register("subject")}
+          >
+            <option value="" disabled hidden>Sujet *</option>
+            <option value="contact">Contact</option>
+            <option value="devis">Demande de devis</option>
+          </select>
+          {errors.subject && <p className="text-red-500 text-sm">{errors.subject.message}</p>}
+
           <textarea
             name="message"
             placeholder="Message *"
-            required
             rows="4"
             className="w-full border rounded-md px-4 py-2"
-          ></textarea>
+            {...register("message")}
+          />
+          {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
           >
             Envoyer
           </button>
-
-          {/* Message de confirmation */}
-          {isSubmitted && (
-            <p className="text-green-600 font-medium pt-2">
-              Message envoyé avec succès !
-            </p>
-          )}
         </form>
       </div>
     </div>

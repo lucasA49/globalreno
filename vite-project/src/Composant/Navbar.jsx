@@ -6,12 +6,15 @@ export default function Navbar() {
     { to: "/toiture", label: "Toiture" },
     { to: "/facade", label: "Façade" },
     { to: "/isolation", label: "Isolation" },
-    { to: "/devis", label: "Devis" },
+    { to: "/Contact", label: "Contact" },
   ];
 
   return (
     <nav className="w-full flex justify-between items-center bg-gray-300 gap-30 h-15 p-9">
+                     <NavLink to="/" >
+
       <img className="w-23 " src="logo-header.png" alt="logo_global_reno" />
+                     </NavLink>
       <div className=" flex ">
         {menu.map(({ to, label }) => (
           <NavLink

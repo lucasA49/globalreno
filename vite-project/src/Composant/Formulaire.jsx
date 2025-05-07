@@ -68,8 +68,8 @@ const ContactForm = () => {
       <div className="bg-white shadow-lg rounded-md w-full max-w-4xl p-8 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Bloc gauche */}
         <div className="flex flex-col justify-center">
-          <h2 className="text-3xl font-bold mb-4">Contact</h2>
-          <p className="text-gray-600 mb-4">
+          <h2 className="text-3xl font-bold  mb-20">Contact</h2>
+          <p className="text-gray-600 ">
             Pour toute question, demande de renseignement ou collaboration,
             n'hésitez pas à me contacter via ce formulaire. Je vous répondrai
             dans les plus brefs délais !

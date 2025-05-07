@@ -7,6 +7,7 @@ export default function Carousel() {
     <img src="/jefco.webp" alt="" className='h-48'/>
     <img src="/seigneurie.png" alt="" className="h-48" />
     <img src="/ultima.png" alt="" className="h-48" />
+    <img src="/gdk.jpg" alt="" className="h-48" />
     </div>
   );
 }

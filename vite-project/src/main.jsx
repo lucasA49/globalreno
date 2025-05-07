@@ -10,6 +10,8 @@ import Toiture from "./Pages/Toiture";
 import Isolation from "./Pages/Isolation";
 import Facade from "./Pages/Facade";
 import Devis from "./Pages/Devis";
+import ConditionGene from "./Pages/ConditionsGene";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,8 +30,12 @@ const router = createBrowserRouter([
     element: <Facade />,
   },
   {
-    path: "/devis",
+    path: "/Contact",
     element: <Devis />,
+  },
+  {
+    path: "/ConditionsGénérales",
+    element: <ConditionGene />,
   },
 ]);
 

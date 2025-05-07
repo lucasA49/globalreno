@@ -4,14 +4,14 @@ export default function Footer() {
   return (
     <footer className="bg-gray-300 py-6 md:py-8  px-4 md:px-8">
       <div className="container  place-items-center grid margin-fr w-full  mx-auto ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-75">
           {/* Logo et infos */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center">
               <div className="w-1 h-12 bg-green-500 mr-4"></div>
               <div>
                 <h2 className="text-blue-900 text-3xl font-bold">Global Reno</h2>
-                <p className="text-blue-900 font-medium">Bâtir la confiance</p>
+                <p className="text-blue-900 font-medium">Construire un avenir durable</p>
               </div>
             </div>
             
@@ -31,7 +31,7 @@ export default function Footer() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </span>
-              <a href="mailto:info@solvari.com" className="hover:underline">info@solvari.com</a>
+              <a href="mailto:info@solvari.com" className="hover:underline">test@globalreno.com</a>
             </div>
        
           </div>
@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="pt-2">
             <h3 className="text-blue-800 font-semibold text-lg mb-3">Adresses</h3>
             <div className="mb-3">
-              <p>20 Rue du Champ Blanc 49280 Mazières-en-Mauges
+              <p>20 Rue du Champ Blanc <br /> 49280 Mazières-en-Mauges
               </p>
             </div>
           
@@ -48,10 +48,9 @@ export default function Footer() {
           
           {/* Plus d'infos */}
           <div className="pt-2 justify-self-end ">
-            <h3 className="text-blue-800 font-semibold text-lg mb-3">Plus d'infos sur Solvari</h3>
+            <h3 className="text-blue-800 font-semibold text-lg mb-3">Plus d'infos sur Global Reno</h3>
             <ul className="space-y-1">
-              <li><a href="#" className="hover:underline">À propos de Solvari</a></li>
-              <li><a href="#" className="hover:underline">Emplois</a></li>
+              <li><a href="#" className="hover:underline">À propos de Global Reno</a></li>
               <li><a href="#" className="hover:underline">Contact</a></li>
             </ul>
           </div>

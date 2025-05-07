@@ -3,26 +3,28 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import emailjs from 'emailjs-com';
+import "../Styles/formulaire.css";
 
 const schema = yup.object({
   name: yup
     .string()
     .max(50)
-    .required("Merci de rentrer votre nom et prénom"),
+    .required(" ⚠️Merci de rentrer votre nom et prénom ⚠️"),
   email: yup
     .string()
-    .email("Merci de rentrer une adresse mail valide")
-    .max(255),
+    .email(" ⚠️Merci de rentrer une adresse mail valide ⚠️")
+    .max(255)
+    .required(),
   phone: yup
     .number()
-    .typeError("Merci de rentrer un numéro de téléphone valide")
-    .required("Merci de rentrer un numéro de téléphone"),
+    .typeError(" ⚠️Merci de rentrer un numéro de téléphone valide ⚠️")
+    .required(" ⚠️Merci de rentrer un numéro de téléphone ⚠️"),
   subject: yup
     .string()
-    .required("Merci de sélectionner un sujet"),
+    .required(" ⚠️Merci de sélectionner un sujet ⚠️"),
   message: yup
     .string()
-    .required("Merci de rentrer un message")
+    .required(" ⚠️Merci de rentrer un message ⚠️")
 }).required();
 
 const ContactForm = () => {
@@ -64,7 +66,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+<div class="image-bg"
+>
+
+
+    <div className="min-h-screen bg-transparen flex items-center justify-center p-4">
       <div className="bg-white shadow-lg rounded-md w-full max-w-4xl p-8 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Bloc gauche */}
         <div className="flex flex-col justify-center">
@@ -89,7 +95,7 @@ const ContactForm = () => {
             placeholder="Nom *"
             className="w-full border rounded-md px-4 py-2"
             {...register("name")}
-          />
+            />
           {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
 
           <input
@@ -98,7 +104,7 @@ const ContactForm = () => {
             placeholder="Numéro de téléphone *"
             className="w-full border rounded-md px-4 py-2"
             {...register("phone")}
-          />
+            />
           {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
 
           <input
@@ -107,14 +113,14 @@ const ContactForm = () => {
             placeholder="Email"
             className="w-full border rounded-md px-4 py-2"
             {...register("email")}
-          />
+            />
           {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
 
           <select
             name="subject"
             className="w-full border rounded-md px-4 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             {...register("subject")}
-          >
+            >
             <option value="" disabled hidden>Sujet *</option>
             <option value="contact">Contact</option>
             <option value="devis">Demande de devis</option>
@@ -127,18 +133,19 @@ const ContactForm = () => {
             rows="4"
             className="w-full border rounded-md px-4 py-2"
             {...register("message")}
-          />
+            />
           {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
 
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
-          >
+            >
             Envoyer
           </button>
         </form>
       </div>
     </div>
+              </div>
   );
 };
 

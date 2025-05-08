@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-around items-center mt-10  gap-20 justify-center">
+      <div className="flex justify-around items-center mt-10  gap-20 ">
         <div
           className="bg-gray-400 w-100  ml-20  rounded-lg p-5"
         >

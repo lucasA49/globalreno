@@ -3,7 +3,7 @@ import CompareImage from "react-compare-image";
 
 function ImageComparison() {
   return (
-    <div style={{ minWidth: "600px", maxWidth:"300px", maxHeight:"300px",minHeight:"300px", margin: "0 0"
+    <div style={{ minWidth: "600px",minHeight:"300px", maxWidth:"800px", maxHeight:"400px"
      }}>
       <CompareImage
         leftImage="avant_maison.jpg"

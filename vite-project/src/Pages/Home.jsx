@@ -10,11 +10,12 @@ export default function Home() {
       <div>
         <img src="baniere-maison.jpeg" className="w-full  h-150" alt="" />
       </div>
-      <div>
+
+      <div className="flex justify-between pt-8 w-full h-20  ">
         <h1 className="w-60 h-10 ml-20  mt-10 text-1g">
           L'expérience Global Reno
         </h1>
-        <div className="flex  justify-end mr-50">
+        <div className="flex  justify-between mr-50 ">
           <img
             src="entreprise-fr.png"
             alt="entreprise-fr.png"
@@ -26,11 +27,18 @@ export default function Home() {
             className="h-20 w-35"
           />
           <img src="rge.png" alt="logo_rge" className="h-20 w-30" />
+          <img
+            src="fabrication-francaise.png"
+            alt="logo_fabrication_francaise"
+            className="h-20 w-35"
+          />
         </div>
       </div>
 
-      <div className="flex justify-between w [85%] items-center ">
-        <div className="bg-gray-400 w-80 h-150 ml-20 mt-10 rounded-lg">
+      <div className="flex justify-around items-center mt-10  gap-20 ">
+        <div
+          className="bg-gray-400 w-100  ml-20  rounded-lg p-5"
+        >
           <p>
             Cela est un texte temporaire pour faire la présentation de
             l'éxpérience de l'entreprise Lorem ipsum dolor sit amet consectetur
@@ -50,7 +58,7 @@ export default function Home() {
             autem ad voluptates.
           </p>
         </div>
-        <div className="flex  w-[85%]flex-col justify-end align-items-center m-45 ">
+        <div className="">
           <HomeSlider />
         </div>
       </div>
@@ -61,10 +69,9 @@ export default function Home() {
         <ImagePanels />
       </div>
       <div>
-
-        <Carousel/>
+        <Carousel />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

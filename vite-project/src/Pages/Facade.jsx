@@ -1,12 +1,24 @@
+import Footer from "../Composant/Footer.jsx";
 import Navbar from "../Composant/Navbar.jsx";
-import Formulaire from  "../Composant/Formulaire.jsx"
-import HomeSlider from "../Composant/HomeSlider.jsx";
+import FacadeRenovation from "../Composant/Facade.jsx";
+import  ImageFacade from "../Composant/CompareFacade.jsx";
+import RenovationForm from "../Composant/FormulaireTravaux.jsx";
+
+
 export default function Facade() {
   return (
     <>
       <Navbar />
-      <Formulaire/>
-    <HomeSlider/>
+      <div>
+        <img src="baniere-maison.jpeg" className="w-full  h-150" alt="" />
+      </div>
+    <FacadeRenovation />
+    <div className="flex justify-center">
+    < ImageFacade/>
+    </div>
+      <RenovationForm/>
+    
+    <Footer />
     </>
   );
 }

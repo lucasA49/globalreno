@@ -13,15 +13,16 @@ export default function FormulaireTravaux() {
     lastName: '',
     num: ''
   });
+  const [submitted, setSubmitted] = useState(false); // Nouvelle variable d'état pour la soumission
 
   const handlePropertyTypeSelect = (type) => {
     setFormData(prev => ({ ...prev, propertyType: type }));
     setStep(2);
   };
+// variable pour les m²
 
   const handleSurfaceInput = (e) => {
     setFormData(prev => ({ ...prev, surface: e.target.value }));
-    setStep(3);
   };
 
   const handleWorkTypeSelect = (workType) => {
@@ -52,6 +53,11 @@ export default function FormulaireTravaux() {
     { id: 'facade', label: 'Façade', icon: Layers },
     { id: 'isolation', label: 'Isolation', icon: Thermometer }
   ];
+
+  const handleSubmit = () => {
+    setSubmitted(true); // Mettre l'état de soumission à true
+    // Tu peux remplacer cela par une vraie soumission à un API ou un service comme EmailJS.
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
@@ -93,13 +99,14 @@ export default function FormulaireTravaux() {
               Quelle est la superficie de votre logement ?
             </h2>
             <input
-              type="text"
-              inputMode="decimal"
+              type="number"
+              inputMode='decimal'
               placeholder="Surface en m²"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={formData.surface}
               onChange={handleSurfaceInput}
               min="2"
+              step="0.1"
             />
           </div>
         )}
@@ -224,14 +231,21 @@ export default function FormulaireTravaux() {
         </div>
 
         {/* Final Submit Button */}
-        {step === 5 && formData.firstName && formData.lastName && formData.num && (
+        {step === 5 && (
           <div className="mt-6">
             <button
-              onClick={() => alert('Formulaire soumis !')} // Remplacez ceci par la logique de soumission réelle
+              onClick={handleSubmit}
               className="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition-colors"
             >
               Soumettre
             </button>
+          </div>
+        )}
+
+        {/* Confirmation Message */}
+        {submitted && (
+          <div className="mt-6 text-center text-green-600 font-semibold">
+            <p>Merci pour votre demande ! Nous vous contacterons bientôt.</p>
           </div>
         )}
       </div>

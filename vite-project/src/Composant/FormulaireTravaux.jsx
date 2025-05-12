@@ -10,7 +10,8 @@ export default function FormulaireTravaux() {
     propertyStatus: '',
     contactTitle: '',
     firstName: '',
-    lastName: ''
+    lastName: '',
+    num: ''
   });
 
   const handlePropertyTypeSelect = (type) => {
@@ -53,8 +54,8 @@ export default function FormulaireTravaux() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-6">
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="w-full max-w-md bg-gray-100 rounded-xl shadow-lg p-6">
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
           Demandez un devis pour vos travaux de rénovation
         </h1>
@@ -66,23 +67,21 @@ export default function FormulaireTravaux() {
               Vos travaux concernent-ils une maison ou un appartement ?
             </h2>
             <div className="grid grid-cols-2 gap-4">
-              {[
-                { type: 'maison', icon: Home, label: 'Maison' },
-                { type: 'appartement', icon: Building, label: 'Appartement' }
-              ].map(({ type, icon: Icon, label }) => (
-                <button 
-                  key={type}
-                  onClick={() => handlePropertyTypeSelect(type)}
-                  className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
-                    formData.propertyType === type 
-                      ? 'border-orange-500 bg-orange-50 text-orange-600' 
-                      : 'border-gray-200 hover:border-gray-300 text-gray-600'
-                  }`}
-                >
-                  <Icon size={48} className="mb-2" />
-                  <span className="font-medium">{label}</span>
-                </button>
-              ))}
+              {[{ type: 'maison', icon: Home, label: 'Maison' }, { type: 'appartement', icon: Building, label: 'Appartement' }]
+                .map(({ type, icon: Icon, label }) => (
+                  <button
+                    key={type}
+                    onClick={() => handlePropertyTypeSelect(type)}
+                    className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
+                      formData.propertyType === type
+                        ? 'border-orange-500 bg-orange-50 text-orange-600'
+                        : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                    }`}
+                  >
+                    <Icon size={48} className="mb-2" />
+                    <span className="font-medium">{label}</span>
+                  </button>
+                ))}
             </div>
           </div>
         )}
@@ -93,13 +92,14 @@ export default function FormulaireTravaux() {
             <h2 className="text-lg font-semibold text-center text-gray-700">
               Quelle est la superficie de votre logement ?
             </h2>
-            <input 
-              type="number" 
-              placeholder="Surface en m²" 
+            <input
+              type="text"
+              inputMode="decimal"
+              placeholder="Surface en m²"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={formData.surface}
               onChange={handleSurfaceInput}
-              min="0"
+              min="2"
             />
           </div>
         )}
@@ -112,12 +112,12 @@ export default function FormulaireTravaux() {
             </h2>
             <div className="grid grid-cols-3 gap-4">
               {workTypes.map(({ id, label, icon: Icon }) => (
-                <button 
+                <button
                   key={id}
                   onClick={() => handleWorkTypeSelect(id)}
                   className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
                     formData.workTypes.includes(id)
-                      ? 'border-orange-500 bg-orange-50 text-orange-600'
+                      ? 'border-orange-500 bg-orange-100 text-orange-400'
                       : 'border-gray-200 hover:border-gray-300 text-gray-600'
                   }`}
                 >
@@ -126,17 +126,6 @@ export default function FormulaireTravaux() {
                 </button>
               ))}
             </div>
-            <button 
-              onClick={() => setStep(4)}
-              className={`w-full p-3 rounded-lg transition-all duration-300 ${
-                formData.workTypes.length > 0
-                  ? 'bg-orange-500 text-white hover:bg-orange-600'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              }`}
-              disabled={formData.workTypes.length === 0}
-            >
-              Continuer
-            </button>
           </div>
         )}
 
@@ -147,23 +136,21 @@ export default function FormulaireTravaux() {
               Êtes-vous propriétaire ou locataire ?
             </h2>
             <div className="grid grid-cols-2 gap-4">
-              {[
-                { status: 'locataire', icon: Key, label: 'Locataire' },
-                { status: 'proprietaire', icon: User, label: 'Propriétaire' }
-              ].map(({ status, icon: Icon, label }) => (
-                <button 
-                  key={status}
-                  onClick={() => handlePropertyStatusSelect(status)}
-                  className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
-                    formData.propertyStatus === status 
-                      ? 'border-orange-500 bg-orange-50 text-orange-600' 
-                      : 'border-gray-200 hover:border-gray-300 text-gray-600'
-                  }`}
-                >
-                  <Icon size={48} className="mb-2" />
-                  <span className="font-medium">{label}</span>
-                </button>
-              ))}
+              {[{ status: 'locataire', icon: Key, label: 'Locataire' }, { status: 'proprietaire', icon: User, label: 'Propriétaire' }]
+                .map(({ status, icon: Icon, label }) => (
+                  <button
+                    key={status}
+                    onClick={() => handlePropertyStatusSelect(status)}
+                    className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
+                      formData.propertyStatus === status
+                        ? 'border-orange-500 bg-orange-50 text-orange-600'
+                        : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                    }`}
+                  >
+                    <Icon size={48} className="mb-2" />
+                    <span className="font-medium">{label}</span>
+                  </button>
+                ))}
             </div>
           </div>
         )}
@@ -176,12 +163,12 @@ export default function FormulaireTravaux() {
             </h2>
             <div className="grid grid-cols-2 gap-4 mb-4">
               {['Madame', 'Monsieur'].map(title => (
-                <button 
+                <button
                   key={title}
                   onClick={() => handleTitleSelect(title)}
                   className={`p-2 border-2 rounded-lg transition-all duration-300 ${
-                    formData.contactTitle === title 
-                      ? 'border-orange-500 bg-orange-50 text-orange-600' 
+                    formData.contactTitle === title
+                      ? 'border-orange-500 bg-orange-50 text-orange-600'
                       : 'border-gray-200 hover:border-gray-300 text-gray-600'
                   }`}
                 >
@@ -189,7 +176,7 @@ export default function FormulaireTravaux() {
                 </button>
               ))}
             </div>
-            <input 
+            <input
               type="text"
               name="firstName"
               placeholder="Prénom"
@@ -197,12 +184,20 @@ export default function FormulaireTravaux() {
               value={formData.firstName}
               onChange={handleContactInfoChange}
             />
-            <input 
+            <input
               type="text"
               name="lastName"
               placeholder="Nom"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={formData.lastName}
+              onChange={handleContactInfoChange}
+            />
+            <input
+              type="tel"
+              name="num"
+              placeholder="Votre numéro"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              value={formData.num}
               onChange={handleContactInfoChange}
             />
           </div>
@@ -211,7 +206,7 @@ export default function FormulaireTravaux() {
         {/* Navigation Buttons */}
         <div className="flex justify-between mt-6">
           {step > 1 && (
-            <button 
+            <button
               onClick={() => setStep(prev => prev - 1)}
               className="text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors"
             >
@@ -219,7 +214,7 @@ export default function FormulaireTravaux() {
             </button>
           )}
           {step < 5 && formData[Object.keys(formData)[step - 1]] && (
-            <button 
+            <button
               onClick={() => setStep(prev => prev + 1)}
               className="ml-auto bg-orange-500 text-white p-2 rounded hover:bg-orange-600 transition-colors"
             >
@@ -227,6 +222,18 @@ export default function FormulaireTravaux() {
             </button>
           )}
         </div>
+
+        {/* Final Submit Button */}
+        {step === 5 && formData.firstName && formData.lastName && formData.num && (
+          <div className="mt-6">
+            <button
+              onClick={() => alert('Formulaire soumis !')} // Remplacez ceci par la logique de soumission réelle
+              className="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              Soumettre
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

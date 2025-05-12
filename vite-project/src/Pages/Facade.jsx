@@ -1,8 +1,8 @@
 import Footer from "../Composant/Footer.jsx";
 import Navbar from "../Composant/Navbar.jsx";
 import FacadeRenovation from "../Composant/Facade.jsx";
-import  ImageFacade from "../Composant/CompareFacade.jsx"
-
+import  ImageFacade from "../Composant/CompareFacade.jsx";
+import RenovationForm from "../Composant/FormulaireTravaux.jsx";
 
 
 export default function Facade() {
@@ -16,6 +16,8 @@ export default function Facade() {
     <div className="flex justify-center">
     < ImageFacade/>
     </div>
+      <RenovationForm/>
+    
     <Footer />
     </>
   );

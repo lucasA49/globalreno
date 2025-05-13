@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-export default function FacadeRenovation() {
-  const [activeTab, setActiveTab] = useState("RÔLE");
+export default function ToitureBody() {
 
-  const tabs = ["RÔLE", "EXPERTISE", "COÛT", "AVANTAGES"];
 
   const problems = [
     {
@@ -47,29 +45,14 @@ export default function FacadeRenovation() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Navigation */}
       <div className="flex text-sm mb-6">
+        <NavLink to="/">
         <span className="text-gray-500">Accueil</span>
+        </NavLink>
         <span className="mx-2 text-gray-500">|</span>
-        <span className="font-medium">Rénovation de façade</span>
+        <span className="font-medium">Rénovation de Toiture</span>
       </div>
 
-      {/* Tabs */}
-      <div className="border-b border-gray-200 mb-8">
-        <div className="flex justify-center gap-8">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              className={`pb-4 px-2 font-medium ${
-                activeTab === tab
-                  ? "border-b-2 border-orange-500 text-orange-500"
-                  : "text-gray-500"
-              }`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-      </div>
+      
 
       {/* Main content */}
       <div className="flex flex-col md:flex-row gap-8 mb-12">
@@ -78,25 +61,22 @@ export default function FacadeRenovation() {
             L'entretien d'une façade de maison, quand cela est nécessaire, passe
             par la rénovation de la façade.
           </h1>
-          <div className="w-16 h-1 bg-orange-500 mb-6"></div>
+          <div className="w-16 h-1 bg-green-500 mb-6"></div>
           <p className="text-gray-700">
             Qu'il soit seulement esthétique ou structurelle, Technibal vous
             accompagne dans votre projet.
           </p>
         </div>
-        <div className="md:w-1/2 bg-orange-500 h-6 flex items-center justify-center">
+        <div className="">
           {/* Espace réservé pour la vidéo */}
-          <div className="text-white text-lg font-medium">
-            Espace réservé pour la vidéo
+          <div className="">
           </div>
         </div>
       </div>
 
       {/* Rôle section */}
       <div className="mb-12">
-        <h2 className="text-orange-500 uppercase text-center tracking-wide font-medium mb-6">
-          RÔLE
-        </h2>
+       
         <h3 className="text-2xl font-bold text-center mb-12">
           Pourquoi rénover ma façade ?
         </h3>

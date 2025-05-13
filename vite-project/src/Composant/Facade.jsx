@@ -1,10 +1,6 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-export default function FacadeRenovation() {
-  const [activeTab, setActiveTab] = useState("RÔLE");
-
-  const tabs = ["RÔLE", "EXPERTISE", "COÛT", "AVANTAGES"];
-
+export default function ToitureBody() {
   const problems = [
     {
       title: "Ma façade présente des traces de mousse",
@@ -23,21 +19,21 @@ export default function FacadeRenovation() {
     {
       title: "Je souhaite remplacer le revêtement de ma façade",
       description:
-"Votre enduit montre des signes d’usure ? Vos murs présentent des irrégularités que vous aimeriez corriger ? Global Reno vous propose des solutions sur mesure pour un revêtement de façade esthétique et durable.",
-     image: "/facade_abime.png",
+        "Votre enduit montre des signes d’usure ? Vos murs présentent des irrégularités que vous aimeriez corriger ? Global Reno vous propose des solutions sur mesure pour un revêtement de façade esthétique et durable.",
+      image: "/facade_abime.png",
       alt: "Revêtement de façade",
     },
     {
       title: "Je veux repeindre ma façade",
       description:
-"Votre façade a perdu de son éclat ou vous souhaitez simplement changer de couleur ? Optez pour un traitement hydrofuge qui redonne vie à votre façade tout en la protégeant durablement.",
+        "Votre façade a perdu de son éclat ou vous souhaitez simplement changer de couleur ? Optez pour un traitement hydrofuge qui redonne vie à votre façade tout en la protégeant durablement.",
       image: "/maison_peinture.png",
       alt: "Peinture de façade",
     },
     {
       title: "Ma façade est sale",
       description:
-"Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
+        "Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
       image: "/maison_sale.png",
       alt: "Façade sale",
     },
@@ -47,56 +43,34 @@ export default function FacadeRenovation() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Navigation */}
       <div className="flex text-sm mb-6">
-        <span className="text-gray-500">Accueil</span>
+        <NavLink to="/">
+          <span className="text-gray-500">Accueil</span>
+        </NavLink>
         <span className="mx-2 text-gray-500">|</span>
-        <span className="font-medium">Rénovation de façade</span>
-      </div>
-
-      {/* Tabs */}
-      <div className="border-b border-gray-200 mb-8">
-        <div className="flex justify-center gap-8">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              className={`pb-4 px-2 font-medium ${
-                activeTab === tab
-                  ? "border-b-2 border-orange-500 text-orange-500"
-                  : "text-gray-500"
-              }`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+        <span className="font-medium">Rénovation de Facade</span>
       </div>
 
       {/* Main content */}
       <div className="flex flex-col md:flex-row gap-8 mb-12">
         <div className="md:w-1/2">
           <h1 className="text-2xl font-bold mb-4">
-            L'entretien d'une façade de maison, quand cela est nécessaire, passe
-            par la rénovation de la façade.
+            Offrez à votre façade l'entretien qu'elle mérite. Nos experts en
+            rénovation sont là pour redonner vie à vos murs extérieurs
           </h1>
-          <div className="w-16 h-1 bg-orange-500 mb-6"></div>
+          <div className="w-16 h-1 bg-green-500 mb-6"></div>
           <p className="text-gray-700">
-            Qu'il soit seulement esthétique ou structurelle, Technibal vous
-            accompagne dans votre projet.
+            Nous vous accompagnons dans la rénovation de votre façade, qu’elle
+            soit esthétique ou structurelle.
           </p>
         </div>
-        <div className="md:w-1/2 bg-orange-500 h-6 flex items-center justify-center">
+        <div className="">
           {/* Espace réservé pour la vidéo */}
-          <div className="text-white text-lg font-medium">
-            Espace réservé pour la vidéo
-          </div>
+          <div className=""></div>
         </div>
       </div>
 
       {/* Rôle section */}
       <div className="mb-12">
-        <h2 className="text-orange-500 uppercase text-center tracking-wide font-medium mb-6">
-          RÔLE
-        </h2>
         <h3 className="text-2xl font-bold text-center mb-12">
           Pourquoi rénover ma façade ?
         </h3>

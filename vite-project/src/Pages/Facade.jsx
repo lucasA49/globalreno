@@ -13,11 +13,10 @@ export default function Facade() {
         <img src="baniere-maison.jpeg" className="w-full  h-150" alt="" />
       </div>
     <FacadeRenovation />
-    <div className="flex justify-center">
+    <div className="flex justify-center gap-15 ">
+      <RenovationForm/>
     < ImageFacade/>
     </div>
-      <RenovationForm/>
-    
     <Footer />
     </>
   );

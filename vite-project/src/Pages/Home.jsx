@@ -10,7 +10,7 @@ export default function Home() {
       <div>
         <img src="baniere-maison.jpeg" className="w-full  h-150" alt="" />
       </div>
-
+   
       <div className="flex justify-between pt-8 w-full h-20  ">
         <h1 className="w-60 h-10 ml-20  mt-10 text-1g">
           L'expérience Global Reno

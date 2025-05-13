@@ -60,8 +60,8 @@ export default function FormulaireTravaux() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-gray-100 rounded-xl shadow-lg p-6">
+    <div className="">
+      <div className="w-full max-w-md bg-gray-100 rounded-xl shadow-lg p-10">
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
           Demandez un devis pour vos travaux de rénovation
         </h1>
@@ -78,10 +78,10 @@ export default function FormulaireTravaux() {
                   <button
                     key={type}
                     onClick={() => handlePropertyTypeSelect(type)}
-                    className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
+                    className={`flex flex-col items-center p-6 border-2 rounded-lg transition-all duration-300 ${
                       formData.propertyType === type
-                        ? 'border-orange-500 bg-orange-50 text-orange-600'
-                        : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                        ? 'border-gray-500 bg-green-50 text-orange-600'
+                        : 'border-gray-500 hover:border-green-300 text-gray-600'
                     }`}
                   >
                     <Icon size={48} className="mb-2" />
@@ -223,7 +223,8 @@ export default function FormulaireTravaux() {
           {step < 5 && formData[Object.keys(formData)[step - 1]] && (
             <button
               onClick={() => setStep(prev => prev + 1)}
-              className="ml-auto bg-orange-500 text-white p-2 rounded hover:bg-orange-600 transition-colors"
+              // Couleur bouton form //
+              className="ml-auto bg-green-500 text-white p-2 rounded hover:bg-blue-900 transition-colors"
             >
               Continuer
             </button>

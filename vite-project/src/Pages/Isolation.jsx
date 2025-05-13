@@ -10,12 +10,12 @@ export default function Isolation() {
       <div>
         <img src="baniere-maison.jpeg" className="w-full  h-150" alt="" />
       </div>
-<IsolationBody/>
-<div className="flex justify-center gap-15 "> 
-<FormulaireTravaux/>
-<SliderIsolation/>
-</div>
-      <Footer/>
+      <IsolationBody />
+      <div className="flex justify-center gap-15 ">
+        <FormulaireTravaux />
+        <SliderIsolation />
+      </div>
+      <Footer />
     </>
   );
 }

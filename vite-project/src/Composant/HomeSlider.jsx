@@ -56,13 +56,13 @@ const ImagePanels = () => {
           {/* Overlay */}
           <div
   className={`absolute inset-0 transition-opacity duration-300 
-    ${index === activeIndex ? 'opacity-0' : 'bg-gray-500 opacity-50'}`}
+    ${index === activeIndex ? 'opacity-0' : 'bg-gray-500 opacity-40'}`}
 ></div>
 
 
           {/* Contenu actif */}
           {index === activeIndex && (
-            <div className="absolute inset-0 z-30 flex flex-col justify-center items-start p-4 sm:p-6 text-red-500">
+            <div className="absolute inset-0 z-30 flex flex-col justify-center items-start p-4 sm:p-6 text-green-500">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">{panel.title}</h2>
               <p className="mb-6 max-w-xs sm:max-w-md">{panel.description}</p>
               <NavLink

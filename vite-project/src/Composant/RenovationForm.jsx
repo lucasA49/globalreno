@@ -20,7 +20,7 @@ function RenovationForm() {
   return (
     <div className="flex space-x-10 p-8">
       <div className="w-1/3 bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 className="text-xl font-bold mb-4">Demandez un devis pour vos travaux de rénovation</h3>
+        <h3 className="text-xl font-bold mb-4 ">Demandez un devis pour vos travaux de rénovation</h3>
 
         {/* Type de logement */}
         <div className="mb-6">

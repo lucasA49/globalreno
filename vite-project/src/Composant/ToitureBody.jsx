@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 export default function ToitureBody() {
-
-
   const problems = [
     {
       title: "Ma façade présente des traces de mousse",
@@ -21,21 +19,21 @@ export default function ToitureBody() {
     {
       title: "Je souhaite remplacer le revêtement de ma façade",
       description:
-"Votre enduit montre des signes d’usure ? Vos murs présentent des irrégularités que vous aimeriez corriger ? Global Reno vous propose des solutions sur mesure pour un revêtement de façade esthétique et durable.",
-     image: "/facade_abime.png",
+        "Votre enduit montre des signes d’usure ? Vos murs présentent des irrégularités que vous aimeriez corriger ? Global Reno vous propose des solutions sur mesure pour un revêtement de façade esthétique et durable.",
+      image: "/facade_abime.png",
       alt: "Revêtement de façade",
     },
     {
       title: "Je veux repeindre ma façade",
       description:
-"Votre façade a perdu de son éclat ou vous souhaitez simplement changer de couleur ? Optez pour un traitement hydrofuge qui redonne vie à votre façade tout en la protégeant durablement.",
+        "Votre façade a perdu de son éclat ou vous souhaitez simplement changer de couleur ? Optez pour un traitement hydrofuge qui redonne vie à votre façade tout en la protégeant durablement.",
       image: "/maison_peinture.png",
       alt: "Peinture de façade",
     },
     {
       title: "Ma façade est sale",
       description:
-"Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
+        "Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
       image: "/maison_sale.png",
       alt: "Façade sale",
     },
@@ -46,39 +44,34 @@ export default function ToitureBody() {
       {/* Navigation */}
       <div className="flex text-sm mb-6">
         <NavLink to="/">
-        <span className="text-gray-500">Accueil</span>
+          <span className="text-gray-500">Accueil</span>
         </NavLink>
         <span className="mx-2 text-gray-500">|</span>
         <span className="font-medium">Rénovation de Toiture</span>
       </div>
 
-      
-
       {/* Main content */}
       <div className="flex flex-col md:flex-row gap-8 mb-12">
         <div className="md:w-1/2">
           <h1 className="text-2xl font-bold mb-4">
-            L'entretien d'une façade de maison, quand cela est nécessaire, passe
-            par la rénovation de la façade.
+            Offrez à votre toiture l'entretien qu'elle mérite. Nos experts en
+            rénovation sont là pour protéger votre maison contre les intempéries
           </h1>
           <div className="w-16 h-1 bg-green-500 mb-6"></div>
           <p className="text-gray-700">
-            Qu'il soit seulement esthétique ou structurelle, Technibal vous
-            accompagne dans votre projet.
+          Nos solutions de rénovation garantissent sécurité et durabilité pour votre toiture
           </p>
         </div>
         <div className="">
           {/* Espace réservé pour la vidéo */}
-          <div className="">
-          </div>
+          <div className=""></div>
         </div>
       </div>
 
       {/* Rôle section */}
       <div className="mb-12">
-       
         <h3 className="text-2xl font-bold text-center mb-12">
-          Pourquoi rénover ma façade ?
+          Pourquoi rénover ma Toiture ?
         </h3>
 
         {/* Problems grid */}

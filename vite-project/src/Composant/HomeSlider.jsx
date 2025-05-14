@@ -67,7 +67,7 @@ const ImagePanels = () => {
               <p className="mb-6 max-w-xs sm:max-w-md">{panel.description}</p>
               <NavLink
                 to={panel.link}
-                className="border   px-4 py-2 text-black-500 hover: hover:text-black transition"
+                className="border   px-4 py-2 text-black-50 hover: hover:text-black-50 transition"
               >
                 découvrir
               </NavLink>

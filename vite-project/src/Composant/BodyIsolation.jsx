@@ -37,6 +37,14 @@ export default function IsolationBody() {
       image: "/maison_sale.png",
       alt: "Façade sale",
     },
+      {
+      title: "Ma façade est sale",
+      description:
+        "Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
+      image: "/maison_sale.png",
+      alt: "Façade sale",
+    },
+      
   ];
 
   return (

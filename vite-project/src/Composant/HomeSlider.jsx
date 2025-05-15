@@ -11,22 +11,19 @@ const panels = [
   },
   {
     title: "Façade",
-    description:
-      "Protégez et embellissez votre façade avec nos solutions durables.",
+    description: "Protégez et embellissez votre façade avec nos solutions durables.",
     image: "fabrication-francaise.png",
     link: "/facade",
   },
   {
     title: "Isolation",
-    description:
-      "Améliorez votre confort thermique et réalisez des économies d’énergie.",
+    description: "Améliorez votre confort thermique et réalisez des économies d’énergie.",
     image: "/apres_maison.jpg",
     link: "/isolation",
   },
   {
     title: "Fenêtres",
-    description:
-      "Optimisez la lumière naturelle et l’isolation de votre maison.",
+    description: "Optimisez la lumière naturelle et l’isolation de votre maison.",
     image: "ultima.png",
     link: "/fenetres",
   },
@@ -38,39 +35,39 @@ const ImagePanels = () => {
   return (
     <div className="flex flex-wrap h-auto overflow-hidden">
       {panels.map((panel, index) => (
-       
         <div
           key={index}
-          className={`relative w-full sm:w-1/2 md:w-1/4 cursor-pointer transition-all duration-500 ease-in-out transform ${
+          className={`relative z-[0] w-full sm:w-1/2 md:w-1/4 cursor-pointer transition-all duration-500 ease-in-out transform ${
             index === activeIndex ? "scale-110" : "scale-100"
           }`}
           onClick={() => setActiveIndex(index)}
         >
-          {/* Affichage de l'image */}
+          {/* Image */}
           <img
             src={panel.image}
             alt={panel.title}
-            className="w-full h-full object-cover border-0.5  z-3"
+            className="w-full h-full object-cover border-0.5 z-3"
           />
 
           {/* Overlay */}
           <div
-  className={`absolute inset-0 transition-opacity duration-300 
-    ${index === activeIndex ? 'opacity-0' : 'bg-gray-500 opacity-40'}`}
-></div>
+            className={`absolute inset-0 transition-opacity duration-300 
+              ${index === activeIndex ? "opacity-0" : "bg-gray-500 opacity-40"}`}
+          ></div>
 
-
-          {/* Contenu actif */}
+          {/* Contenu actif avec fond gris et arrondi */}
           {index === activeIndex && (
-            <div className="absolute inset-0 z-30 flex flex-col justify-center items-start p-4 sm:p-6 text-green-500">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">{panel.title}</h2>
-              <p className="mb-6 max-w-xs sm:max-w-md">{panel.description}</p>
-              <NavLink
-                to={panel.link}
-                className="border   px-4 py-2 text-black-50 hover: hover:text-black-50 transition"
-              >
-                découvrir
-              </NavLink>
+            <div className="absolute inset-0 z-30 flex justify-center items-center p-4 sm:p-6">
+              <div className="bg-gray-200 bg-opacity-90 rounded-lg p-4 w-full max-w-xs sm:max-w-md text-green-500 break-words">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">{panel.title}</h2>
+                <p className="mb-6">{panel.description}</p>
+                <NavLink
+                  to={panel.link}
+                  className="border px-4 py-2 text-black-50 hover:text-black-50 transition"
+                >
+                  découvrir
+                </NavLink>
+              </div>
             </div>
           )}
         </div>

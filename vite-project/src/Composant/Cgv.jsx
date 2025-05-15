@@ -53,8 +53,10 @@ export default function Cgv() {
 
           <div className="space-y-2 text-sm text-gray-500">
             <p>Les condition générales d'utilisation du site web global</p>
-            <p>📧 contact@aysun.fr</p>
-            <p>📞 +33 6 12 34 56 78</p>
+            <p>📧  globalreno49@gmail.com</p>
+                  <a href="tel:+33676252585" className="hover:underline">
+              📞 06 76 25 25 85
+              </a>
           </div>
         </div>
       </div>

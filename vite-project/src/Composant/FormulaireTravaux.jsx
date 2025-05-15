@@ -1,57 +1,67 @@
-import React, { useState } from 'react';
-import { Home, Building, Key, User, Factory, Layers, Thermometer } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Home,
+  Building,
+  Key,
+  User,
+  Factory,
+  Layers,
+  Thermometer,
+} from "lucide-react";
 
 export default function FormulaireTravaux() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    propertyType: '',
-    surface: '',
+    propertyType: "",
+    surface: "",
     workTypes: [],
-    propertyStatus: '',
-    contactTitle: '',
-    firstName: '',
-    lastName: '',
-    num: ''
+    propertyStatus: "",
+    contactTitle: "",
+    firstName: "",
+    lastName: "",
+    num: "",
   });
   const [submitted, setSubmitted] = useState(false); // Nouvelle variable d'état pour la soumission
 
+  console.log(submitted);
+
   const handlePropertyTypeSelect = (type) => {
-    setFormData(prev => ({ ...prev, propertyType: type }));
+    setFormData((prev) => ({ ...prev, propertyType: type }));
     setStep(2);
   };
-// variable pour les m²
+  // variable pour les m²
 
   const handleSurfaceInput = (e) => {
-    setFormData(prev => ({ ...prev, surface: e.target.value }));
+    setFormData((prev) => ({ ...prev, surface: e.target.value }));
   };
 
   const handleWorkTypeSelect = (workType) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       workTypes: prev.workTypes.includes(workType)
-        ? prev.workTypes.filter(type => type !== workType)
-        : [...prev.workTypes, workType]
+        ? prev.workTypes.filter((type) => type !== workType)
+        : [...prev.workTypes, workType],
     }));
   };
 
   const handlePropertyStatusSelect = (status) => {
-    setFormData(prev => ({ ...prev, propertyStatus: status }));
+    setFormData((prev) => ({ ...prev, propertyStatus: status }));
     setStep(4);
   };
 
   const handleContactInfoChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleTitleSelect = (title) => {
-    setFormData(prev => ({ ...prev, contactTitle: title }));
+    setFormData((prev) => ({ ...prev, contactTitle: title }));
   };
 
   const workTypes = [
-    { id: 'roof', label: 'Toiture', icon: Factory },
-    { id: 'facade', label: 'Façade', icon: Layers },
-    { id: 'isolation', label: 'Isolation', icon: Thermometer }
+    { id: "roof", label: "Toiture", icon: Factory },
+    { id: "facade", label: "Façade", icon: Layers },
+    { id: "isolation", label: "Isolation", icon: Thermometer },
   ];
 
   const handleSubmit = () => {
@@ -73,21 +83,23 @@ export default function FormulaireTravaux() {
               Vos travaux concernent-ils une maison ou un appartement ?
             </h2>
             <div className="grid grid-cols-2 gap-4">
-              {[{ type: 'maison', icon: Home, label: 'Maison' }, { type: 'appartement', icon: Building, label: 'Appartement' }]
-                .map(({ type, icon: Icon, label }) => (
-                  <button
-                    key={type}
-                    onClick={() => handlePropertyTypeSelect(type)}
-                    className={`flex flex-col items-center p-6 border-2 rounded-lg transition-all duration-300 ${
-                      formData.propertyType === type
-                        ? 'border-gray-500 bg-green-50 text-orange-600'
-                        : 'border-gray-500 hover:border-green-300 text-gray-600'
-                    }`}
-                  >
-                    <Icon size={48} className="mb-2" />
-                    <span className="font-medium">{label}</span>
-                  </button>
-                ))}
+              {[
+                { type: "maison", icon: Home, label: "Maison" },
+                { type: "appartement", icon: Building, label: "Appartement" },
+              ].map(({ type, icon: Icon, label }) => (
+                <button
+                  key={type}
+                  onClick={() => handlePropertyTypeSelect(type)}
+                  className={`flex flex-col items-center p-6 border-2 rounded-lg transition-all duration-300 ${
+                    formData.propertyType === type
+                      ? "border-gray-500 bg-green-50 text-orange-600"
+                      : "border-gray-500 hover:border-green-300 text-gray-600"
+                  }`}
+                >
+                  <Icon size={48} className="mb-2" />
+                  <span className="font-medium">{label}</span>
+                </button>
+              ))}
             </div>
           </div>
         )}
@@ -100,7 +112,7 @@ export default function FormulaireTravaux() {
             </h2>
             <input
               type="number"
-              inputMode='decimal'
+              inputMode="decimal"
               placeholder="Surface en m²"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={formData.surface}
@@ -121,11 +133,11 @@ export default function FormulaireTravaux() {
               {workTypes.map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
-                  onClick={() => handleWorkTypeSelect(id)}
+                  onClick={() => handleWorkTypeSelect(label)}
                   className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
                     formData.workTypes.includes(id)
-                      ? 'border-orange-500 bg-orange-100 text-orange-400'
-                      : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                      ? "border-orange-500 bg-orange-100 text-orange-400"
+                      : "border-gray-200 hover:border-gray-300 text-gray-600"
                   }`}
                 >
                   <Icon size={48} className="mb-2" />
@@ -143,21 +155,23 @@ export default function FormulaireTravaux() {
               Êtes-vous propriétaire ou locataire ?
             </h2>
             <div className="grid grid-cols-2 gap-4">
-              {[{ status: 'locataire', icon: Key, label: 'Locataire' }, { status: 'proprietaire', icon: User, label: 'Propriétaire' }]
-                .map(({ status, icon: Icon, label }) => (
-                  <button
-                    key={status}
-                    onClick={() => handlePropertyStatusSelect(status)}
-                    className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
-                      formData.propertyStatus === status
-                        ? 'border-orange-500 bg-orange-50 text-orange-600'
-                        : 'border-gray-200 hover:border-gray-300 text-gray-600'
-                    }`}
-                  >
-                    <Icon size={48} className="mb-2" />
-                    <span className="font-medium">{label}</span>
-                  </button>
-                ))}
+              {[
+                { status: "locataire", icon: Key, label: "Locataire" },
+                { status: "proprietaire", icon: User, label: "Propriétaire" },
+              ].map(({ status, icon: Icon, label }) => (
+                <button
+                  key={status}
+                  onClick={() => handlePropertyStatusSelect(status)}
+                  className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
+                    formData.propertyStatus === status
+                      ? "border-orange-500 bg-orange-50 text-orange-600"
+                      : "border-gray-200 hover:border-gray-300 text-gray-600"
+                  }`}
+                >
+                  <Icon size={48} className="mb-2" />
+                  <span className="font-medium">{label}</span>
+                </button>
+              ))}
             </div>
           </div>
         )}
@@ -169,14 +183,14 @@ export default function FormulaireTravaux() {
               Comment vous appelez-vous ?
             </h2>
             <div className="grid grid-cols-2 gap-4 mb-4">
-              {['Madame', 'Monsieur'].map(title => (
+              {["Madame", "Monsieur"].map((title) => (
                 <button
                   key={title}
                   onClick={() => handleTitleSelect(title)}
                   className={`p-2 border-2 rounded-lg transition-all duration-300 ${
                     formData.contactTitle === title
-                      ? 'border-orange-500 bg-orange-50 text-orange-600'
-                      : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                      ? "border-orange-500 bg-orange-50 text-orange-600"
+                      : "border-gray-200 hover:border-gray-300 text-gray-600"
                   }`}
                 >
                   {title}
@@ -214,7 +228,7 @@ export default function FormulaireTravaux() {
         <div className="flex justify-between mt-6">
           {step > 1 && (
             <button
-              onClick={() => setStep(prev => prev - 1)}
+              onClick={() => setStep((prev) => prev - 1)}
               className="text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors"
             >
               ← Retour
@@ -222,7 +236,7 @@ export default function FormulaireTravaux() {
           )}
           {step < 5 && formData[Object.keys(formData)[step - 1]] && (
             <button
-              onClick={() => setStep(prev => prev + 1)}
+              onClick={() => setStep((prev) => prev + 1)}
               // Couleur bouton form //
               className="ml-auto bg-green-500 text-white p-2 rounded hover:bg-blue-900 transition-colors"
             >

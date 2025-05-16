@@ -12,7 +12,7 @@ export default function Toiture() {
         <img src="baniere-maison.jpeg" className="w-full  h-150" alt="" />
       </div>
       <ToitureBody/>
-      <div className="flex justify-center gap-15 ">
+<div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 px-4">
       <RenovationForm/>
     < ImageFacade/>
     </div>      

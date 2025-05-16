@@ -3,8 +3,8 @@ import CompareImage from "react-compare-image";
 
 function SliderFacade() {
   return (
-    <div style={{  minWidth: "550px",minHeight:"600px", maxWidth:"600px", maxHeight:"500px",
-     }}>
+   <div className="w-full max-w-[600px] sm:min-w-[300px]">
+
       <CompareImage
         leftImage="/avant_facade.png"
         rightImage="/apres_facade.png"

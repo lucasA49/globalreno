@@ -2,3 +2,9 @@ body, html, #root {
   width: 100%;
   height: 100%;
 }
+.noscroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+  touch-action: none !important;
+  position: relative;
+}

@@ -3,23 +3,23 @@ import { NavLink } from "react-router-dom";
 export default function ToitureBody() {
   const problems = [
     {
-      title: "Ma façade présente des traces de mousse",
+      title: "Ma toiture est envahie par la mousse et les lichens",
       description:
-        "Des mousses ou des traces de verdissure apparaissent sur votre façade ? Ne laissez pas la situation se dégrader : optez dès maintenant pour un démoussage efficace de votre façade.",
+        "La présence de mousses ou de végétation sur votre toit peut abîmer les tuiles et provoquer des infiltrations. Un démoussage régulier prolonge la durée de vie de votre toiture et améliore son efficacité thermique.",
       image: "/maison_mouse.png",
       alt: "Mousse sur façade",
     },
     {
-      title: "Mes murs présentent des marques d'humidité apparentes",
+      title: "J’ai des fuites d’eau ou des traces d’humidité au plafond",
       description:
-        "Des traces d’humidité ou des microfissures apparaissent sur vos murs extérieurs ? Ces signes peuvent révéler un problème structurel plus sérieux. Profitez d’une étude gratuite dès maintenant",
+        "Des infiltrations dans la maison sont souvent le signe d’une toiture endommagée ou mal étanchéifiée. Une intervention rapide permet d’éviter des dégâts plus importants à l’intérieur de votre logement.",
       image: "/maison_humide.png",
       alt: "Humidité sur murs",
     },
     {
-      title: "Je souhaite remplacer le revêtement de ma façade",
+      title: "Mes tuiles sont cassées, déplacées ou abîmées",
       description:
-        "Votre enduit montre des signes d’usure ? Vos murs présentent des irrégularités que vous aimeriez corriger ? Global Reno vous propose des solutions sur mesure pour un revêtement de façade esthétique et durable.",
+        "Des tuiles dégradées exposent votre habitation aux intempéries. Grâce à une rénovation ciblée ou partielle, vous redonnez à votre toit toute sa protection sans refaire toute la toiture.",
       image: "/facade_abime.png",
       alt: "Revêtement de façade",
     },
@@ -31,9 +31,9 @@ export default function ToitureBody() {
       alt: "Peinture de façade",
     },
     {
-      title: "Ma façade est sale",
+      title: "Je veux améliorer l’isolation de mon toit",
       description:
-        "Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
+        "Une toiture mal isolée peut représenter  jusqu’à 30 % des déperditions thermiques. Avec l’isolation par l’extérieur (sarking) ou l’intérieur, réduisez vos factures et améliorez votre confort toute l’année.",
       image: "/maison_sale.png",
       alt: "Façade sale",
     },
@@ -59,7 +59,8 @@ export default function ToitureBody() {
           </h1>
           <div className="w-16 h-1 bg-green-500 mb-6"></div>
           <p className="text-gray-700">
-          Nos solutions de rénovation garantissent sécurité et durabilité pour votre toiture
+            Nos solutions de rénovation garantissent sécurité et durabilité pour
+            votre toiture
           </p>
         </div>
         <div className="">

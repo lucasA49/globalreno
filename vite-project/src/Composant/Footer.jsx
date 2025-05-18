@@ -2,17 +2,15 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-300 py-6 md:py-8  px-4 md:px-8">
-      <div className="container  place-items-center grid margin-fr w-full  mx-auto ">
-        <div className="grid grid-cols-1  md:grid-cols-3 gap-75">
+    <footer className="bg-gray-300 py-6 md:py-8 px-4 md:px-8">
+      <div className="container place-items-center grid w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-75">
           {/* Logo et infos */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col items-start md:items-start space-y-4 text-center md:text-left">
             <div className="flex items-center">
               <div className="w-1 h-12 bg-green-500 mr-4"></div>
               <div>
-                <h2 className="text-blue-900 text-3xl font-bold">
-                  Global Reno
-                </h2>
+                <h2 className="text-blue-900 text-3xl font-bold">Global Reno</h2>
                 <p className="text-blue-900 font-medium">
                   Construire un avenir durable
                 </p>
@@ -31,7 +29,7 @@ export default function Footer() {
                 </svg>
               </span>
               <a href="tel:+33784864539" className="hover:underline">
-                07 84 86 45 39{" "}
+                07 84 86 45 39
               </a>
             </div>
 
@@ -47,14 +45,14 @@ export default function Footer() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </span>
-              <a href="mailto:info@solvari.com" className="hover:underline">
-                test@globalreno.com
+              <a href="mailto:test@globalreno.com" className="hover:underline">
+            globalreno49@gmail.com
               </a>
             </div>
           </div>
 
           {/* Adresses */}
-          <div className="pt-2">
+          <div className="pt-6 md:pt-2 text-center md:text-left">
             <h3 className="text-blue-800 font-semibold text-lg mb-3">
               Adresses
             </h3>
@@ -66,7 +64,7 @@ export default function Footer() {
           </div>
 
           {/* Plus d'infos */}
-          <div className="pt-2 justify-self-end ">
+          <div className="pt-6 md:pt-2 text-center md:text-left">
             <h3 className="text-blue-800 font-semibold text-lg mb-3">
               Plus d'infos sur Global Reno
             </h3>
@@ -77,8 +75,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-              
-                <NavLink to="/Contact" className="hover:underline">Contact</NavLink>
+                <NavLink to="/Contact" className="hover:underline">
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -90,15 +89,13 @@ export default function Footer() {
             to="/ConditionsGénérales"
             className="hover:underline md:mr-2"
           >
-            Conditions d'utilisation{" "}
+            Conditions d'utilisation
           </NavLink>
-          <span className="hidden md:inline">|</span>
-          <a href="#" className="hover:underline md:mx-2">
-            Politique de vie privée
-          </a>
-          <span className="hidden md:inline">|</span>
+          <span className="hidden md:inline"></span>
+       
+          <span className="hidden md:inline">-</span>
           <span className="md:ml-2">
-            © 2025 - Global Reno - Tous droits réservés
+            © 2025 - Global Reno -  Tous droits réservés
           </span>
         </div>
       </div>

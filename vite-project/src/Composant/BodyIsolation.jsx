@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 export default function IsolationBody() {
   const problems = [
     {
-      title: "Ma façade présente des traces de mousse",
+      title: "Ma maison est mal isolée : je ressens le froid ou la chaleur",
       description:
-        "Des mousses ou des traces de verdissure apparaissent sur votre façade ? Ne laissez pas la situation se dégrader : optez dès maintenant pour un démoussage efficace de votre façade.",
+        "Des variations de température importantes dans votre logement ? Cela peut être dû à une isolation dégradée ou insuffisante. Une bonne isolation thermique vous garantit un confort optimal toute l’année, été comme hiver.",
       image: "/maison_mouse.png",
       alt: "Mousse sur façade",
     },
@@ -17,30 +17,30 @@ export default function IsolationBody() {
       alt: "Humidité sur murs",
     },
     {
-      title: "Je souhaite remplacer le revêtement de ma façade",
+      title: " Mes factures de chauffage ou de climatisation sont trop élevées",
       description:
-        "Votre enduit montre des signes d’usure ? Vos murs présentent des irrégularités que vous aimeriez corriger ? Global Reno vous propose des solutions sur mesure pour un revêtement de façade esthétique et durable.",
+        "Une isolation inefficace entraîne des pertes d’énergie importantes. Grâce à l’isolation thermique par l’extérieur (ITE) ou des combles, réduisez significativement votre consommation d’énergie et vos dépenses.",
       image: "/facade_abime.png",
       alt: "Revêtement de façade",
     },
     {
-      title: "Je veux repeindre ma façade",
+      title: "Je veux valoriser mon bien immobilier",
       description:
-        "Votre façade a perdu de son éclat ou vous souhaitez simplement changer de couleur ? Optez pour un traitement hydrofuge qui redonne vie à votre façade tout en la protégeant durablement.",
+        "Une maison bien isolée est un vrai atout en cas de revente. Améliorez votre DPE (Diagnostic de Performance Énergétique) et augmentez la valeur de votre bien tout en le rendant plus économe et écologique.",
       image: "/maison_peinture.png",
       alt: "Peinture de façade",
     },
     {
-      title: "Ma façade est sale",
+      title: "Je souhaite isoler mes combles perdus ou aménageables",
       description:
-        "Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
+        "Les combles sont responsables de 30 % des déperditions thermiques dans une maison mal isolée. Avec nos solutions performantes, gagnez en confort et réalisez des économies sur le long terme.",
       image: "/maison_sale.png",
       alt: "Façade sale",
     },
       {
-      title: "Ma façade est sale",
+      title: "Je ressens des courants d’air ou l’humidité dans certaines pièces",
       description:
-        "Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
+        "Des parois froides, des murs humides, ou des zones inconfortables ? Ce sont souvent les signes d’une isolation thermique défaillante. Nos experts identifient les ponts thermiques et vous proposent une solution adaptée.",
       image: "/maison_sale.png",
       alt: "Façade sale",
     },

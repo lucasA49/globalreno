@@ -46,7 +46,7 @@ export default function Footer() {
                 </svg>
               </span>
               <a href="mailto:test@globalreno.com" className="hover:underline">
-                test@globalreno.com
+            globalreno49@gmail.com
               </a>
             </div>
           </div>
@@ -91,13 +91,11 @@ export default function Footer() {
           >
             Conditions d'utilisation
           </NavLink>
-          <span className="hidden md:inline">|</span>
-          <a href="#" className="hover:underline md:mx-2">
-            Politique de vie privée
-          </a>
-          <span className="hidden md:inline">|</span>
+          <span className="hidden md:inline"></span>
+       
+          <span className="hidden md:inline">-</span>
           <span className="md:ml-2">
-            © 2025 - Global Reno - Tous droits réservés
+            © 2025 - Global Reno -  Tous droits réservés
           </span>
         </div>
       </div>

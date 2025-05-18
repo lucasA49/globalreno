@@ -10,7 +10,11 @@ export default function Home() {
       <Navbar />
 
       <div>
-        <img src="baniere-maison.jpeg" className="w-full h-[150px] object-cover" alt="bannière" />
+        <img
+          src="baniere-maison.jpeg"
+          className="w-full h-[150px] object-cover"
+          alt="bannière"
+        />
       </div>
 
       {/* Titre + Logos */}
@@ -20,10 +24,22 @@ export default function Home() {
             L'expérience Global Reno
           </h1>
           <div className="flex flex-wrap justify-end gap-2 md:gap-4">
-            <img src="entreprise-fr.png" alt="entreprise-fr" className="h-10 md:h-16 w-auto" />
-            <img src="fabrication-francaise.png" alt="fabrication-francaise" className="h-10 md:h-16 w-auto" />
+            <img
+              src="entreprise-fr.png"
+              alt="entreprise-fr"
+              className="h-10 md:h-16 w-auto"
+            />
+            <img
+              src="fabrication-francaise.png"
+              alt="fabrication-francaise"
+              className="h-10 md:h-16 w-auto"
+            />
             <img src="rge.png" alt="logo_rge" className="h-10 md:h-16 w-auto" />
-            <img src="fabrication-francaise.png" alt="fabrication-francaise" className="h-10 md:h-16 w-auto" />
+            <img
+              src="fabrication-francaise.png"
+              alt="fabrication-francaise"
+              className="h-10 md:h-16 w-auto"
+            />
           </div>
         </div>
       </div>
@@ -32,12 +48,18 @@ export default function Home() {
       <div className="flex flex-col md:flex-row justify-around items-center mt-10 gap-6 px-4">
         <div className="bg-gray-400 rounded-lg p-4 w-full md:w-[40%]">
           <p className="text-sm md:text-base text-justify break-words">
-  Cela est un texte temporaire pour faire la présentation de
-  l'expérience de l'entreprise. Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Fuga atque rerum accusamus quibusdam in mollitia
-  voluptatem...rthrthrthrthrthrthhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhgergergergergergegegergergerdgergergegergergergeqrgeqrgergegegeg
-</p>
-
+            Chez Global Reno, nous mettons notre savoir-faire au service de
+            votre habitat. <br /> Spécialistes de la rénovation de toiture, de façade
+            et de l’isolation extérieure, <br /> 
+            nous vous accompagnons dans vos
+            projets avec des solutions durables, esthétiques et performantes. <br /> 🏡
+            Redonnez vie à votre maison tout en améliorant son confort et sa
+            valeur. <br /> Nos équipes certifiées interviennent avec rigueur et
+            professionnalisme, dans le respect des normes françaises et
+            européennes, pour garantir des résultats à la hauteur de vos
+            attentes.  <br />👉 Faites le choix de la qualité et de la tranquillité
+            avec Global Reno.
+          </p>
         </div>
         <div className="w-full md:w-[40%]">
           <HomeSlider />

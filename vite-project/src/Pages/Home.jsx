@@ -10,11 +10,9 @@ export default function Home() {
       <Navbar />
 
       <div>
-        <img
-          src="baniere-maison.jpeg"
-          className="w-full h-[150px] object-cover"
-          alt="bannière"
-        />
+        <img 
+          src="baniere-kdo.png"
+         className="w-full  h-150" alt=""/>
       </div>
 
       {/* Titre + Logos */}

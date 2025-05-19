@@ -8,6 +8,7 @@ import {
   Layers,
   Thermometer,
 } from "lucide-react";
+import emailjs from 'emailjs-com';
 
 export default function FormulaireTravaux() {
   const [step, setStep] = useState(1);
@@ -19,17 +20,17 @@ export default function FormulaireTravaux() {
     contactTitle: "",
     firstName: "",
     lastName: "",
+    email: "",
     num: "",
   });
-  const [submitted, setSubmitted] = useState(false); // Nouvelle variable d'état pour la soumission
-
-  console.log(submitted);
+  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
   const handlePropertyTypeSelect = (type) => {
     setFormData((prev) => ({ ...prev, propertyType: type }));
     setStep(2);
   };
-  // variable pour les m²
 
   const handleSurfaceInput = (e) => {
     setFormData((prev) => ({ ...prev, surface: e.target.value }));
@@ -65,8 +66,70 @@ export default function FormulaireTravaux() {
   ];
 
   const handleSubmit = () => {
-    setSubmitted(true); // Mettre l'état de soumission à true
-    // Tu peux remplacer cela par une vraie soumission à un API ou un service comme EmailJS.
+    // Vérifier si tous les champs nécessaires sont remplis
+    if (!formData.firstName || !formData.lastName || !formData.num) {
+      setError("Veuillez remplir tous les champs obligatoires");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError(null);
+
+    // Préparer les données pour EmailJS avec les noms de variables exacts du template
+    const templateParams = {
+      to_email: "lucas.ak49@hotmail.com",
+      contactTitle: formData.contactTitle, // Contrat: {{contactTitle}}
+      firstName: formData.firstName, // Prénom du client: {{firstName}}
+      lastName: formData.lastName, // Nom de Famille du client: {{lastName}}
+      email: formData.email || "non fourni", // email du client: {{email}}
+      num: formData.num, // Numéro de telephone du client: {{num}}
+      propertyStatus: formData.propertyStatus, // Propriétaire ou Locataire: {{PropertyStatus}}
+      propertyType: formData.propertyType, // Maison ou Appartement: {{propertyType}}
+      surface: formData.surface, // Surface du logement: {{surface}}
+      workTypes: formData.workTypes.join(", "), // Type de travaux: {{workTypes}}
+      subject: "Nouvelle demande de Contact sur Global Reno"
+    };
+
+    // Utilisez les mêmes identifiants EmailJS que dans le premier formulaire
+    const serviceId = 'service_ytmnquu';
+    const templateId = 'template_m2mhtnm'; // Vous pourriez avoir besoin de créer un nouveau template adapté à ce formulaire
+    const userId = 'Qefwz8LeMgFGv424_';
+
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
+      .then(() => {
+        console.log('Succès - email envoyé');
+        setSubmitted(true);
+        setIsSubmitting(false);
+      })
+      .catch((error) => {
+        console.error('Erreur lors de l\'envoi:', error);
+        setError("Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.");
+        setIsSubmitting(false);
+      });
+  };
+
+  const canContinue = () => {
+    switch (step) {
+      case 1:
+        return !!formData.propertyType;
+      case 2:
+        return !!formData.surface;
+      case 3:
+        return formData.workTypes.length > 0;
+      case 4:
+        return !!formData.propertyStatus;
+      case 5:
+        return !!formData.contactTitle && !!formData.firstName && !!formData.lastName && !!formData.num;
+      default:
+        return false;
+    }
+  };
+
+  const handleContinue = () => {
+    if (canContinue()) {
+      setStep((prev) => prev + 1);
+    }
   };
 
   return (
@@ -120,6 +183,14 @@ export default function FormulaireTravaux() {
               min="2"
               step="0.1"
             />
+            {formData.surface && (
+              <button
+                onClick={handleContinue}
+                className="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition-colors mt-4"
+              >
+                Continuer
+              </button>
+            )}
           </div>
         )}
 
@@ -133,7 +204,7 @@ export default function FormulaireTravaux() {
               {workTypes.map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
-                  onClick={() => handleWorkTypeSelect(label)}
+                  onClick={() => handleWorkTypeSelect(id)}
                   className={`flex flex-col items-center p-4 border-2 rounded-lg transition-all duration-300 ${
                     formData.workTypes.includes(id)
                       ? "border-orange-500 bg-orange-100 text-orange-400"
@@ -145,6 +216,14 @@ export default function FormulaireTravaux() {
                 </button>
               ))}
             </div>
+            {formData.workTypes.length > 0 && (
+              <button
+                onClick={handleContinue}
+                className="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition-colors mt-4"
+              >
+                Continuer
+              </button>
+            )}
           </div>
         )}
 
@@ -177,7 +256,7 @@ export default function FormulaireTravaux() {
         )}
 
         {/* Step 5: Contact Information */}
-        {step === 5 && (
+        {step === 5 && !submitted && (
           <div className="space-y-4">
             <h2 className="text-lg font-semibold text-center text-gray-700">
               Comment vous appelez-vous ?
@@ -214,6 +293,14 @@ export default function FormulaireTravaux() {
               onChange={handleContactInfoChange}
             />
             <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              value={formData.email || ""}
+              onChange={handleContactInfoChange}
+            />
+            <input
               type="tel"
               name="num"
               placeholder="Votre numéro"
@@ -221,23 +308,27 @@ export default function FormulaireTravaux() {
               value={formData.num}
               onChange={handleContactInfoChange}
             />
+
+            {error && (
+              <div className="text-red-500 text-sm mt-2">{error}</div>
+            )}
           </div>
         )}
 
         {/* Navigation Buttons */}
         <div className="flex justify-between mt-6">
-          {step > 1 && (
+          {step > 1 && !submitted && (
             <button
               onClick={() => setStep((prev) => prev - 1)}
               className="text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors"
+              disabled={isSubmitting}
             >
               ← Retour
             </button>
           )}
-          {step < 5 && formData[Object.keys(formData)[step - 1]] && (
+          {step < 5 && step !== 2 && step !== 3 && canContinue() && (
             <button
-              onClick={() => setStep((prev) => prev + 1)}
-              // Couleur bouton form //
+              onClick={handleContinue}
               className="ml-auto bg-green-500 text-white p-2 rounded hover:bg-blue-900 transition-colors"
             >
               Continuer
@@ -246,13 +337,14 @@ export default function FormulaireTravaux() {
         </div>
 
         {/* Final Submit Button */}
-        {step === 5 && (
+        {step === 5 && !submitted && (
           <div className="mt-6">
             <button
               onClick={handleSubmit}
               className="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition-colors"
+              disabled={isSubmitting}
             >
-              Soumettre
+              {isSubmitting ? "Envoi en cours..." : "Soumettre"}
             </button>
           </div>
         )}
@@ -261,6 +353,26 @@ export default function FormulaireTravaux() {
         {submitted && (
           <div className="mt-6 text-center text-green-600 font-semibold">
             <p>Merci pour votre demande ! Nous vous contacterons bientôt.</p>
+            <button
+              onClick={() => {
+                setFormData({
+                  propertyType: "",
+                  surface: "",
+                  workTypes: [],
+                  propertyStatus: "",
+                  contactTitle: "",
+                  firstName: "",
+                  lastName: "",
+                  email: "",
+                  num: "",
+                });
+                setSubmitted(false);
+                setStep(1);
+              }}
+              className="mt-4 bg-gray-200 text-gray-800 p-2 rounded hover:bg-gray-300 transition-colors"
+            >
+              Nouvelle demande
+            </button>
           </div>
         )}
       </div>

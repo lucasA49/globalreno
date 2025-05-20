@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   height: 100%; /* ou n'importe quelle hauteur souhaitée */
-  background-image: url('\koala.jpg'); /* depuis le dossier public */
+  background-image: url('/bg-form.png'); /* depuis le dossier public */
   background-size: cover;
   background-position: center;
   overflow: hidden;

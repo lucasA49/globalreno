@@ -11,7 +11,7 @@ export default function Isolation() {
         <img src="baniere-maison.jpeg" className="w-full  h-150" alt="" />
       </div>
       <IsolationBody />
-<div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 px-4">
+<div className="w-full flex flex-col md:flex-row items-center justify-center gap-4 p-4">    
         <FormulaireTravaux />
         <SliderIsolation />
       </div>

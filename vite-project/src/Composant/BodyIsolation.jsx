@@ -37,14 +37,14 @@ export default function IsolationBody() {
       image: "/maison_sale.png",
       alt: "Façade sale",
     },
-      {
-      title: "Je ressens des courants d’air ou l’humidité dans certaines pièces",
+    {
+      title:
+        "Je ressens des courants d’air ou l’humidité dans certaines pièces",
       description:
         "Des parois froides, des murs humides, ou des zones inconfortables ? Ce sont souvent les signes d’une isolation thermique défaillante. Nos experts identifient les ponts thermiques et vous proposent une solution adaptée.",
       image: "/maison_sale.png",
       alt: "Façade sale",
     },
-      
   ];
 
   return (

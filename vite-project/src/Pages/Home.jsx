@@ -12,7 +12,7 @@ export default function Home() {
       <div>
         <img 
           src="baniere-kdo.png"
-         className="w-full  h-150" alt=""/>
+         className="w-full  min-h-[300px] max-h-[1000px] object-cover" alt=""/>
       </div>
 
       {/* Titre + Logos */}

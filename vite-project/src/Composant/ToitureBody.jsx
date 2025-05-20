@@ -6,21 +6,21 @@ export default function ToitureBody() {
       title: "Ma toiture est envahie par la mousse et les lichens",
       description:
         "La présence de mousses ou de végétation sur votre toit peut abîmer les tuiles et provoquer des infiltrations. Un démoussage régulier prolonge la durée de vie de votre toiture et améliore son efficacité thermique.",
-      image: "/maison_mouse.png",
+      image: "/mousse-toiture.png",
       alt: "Mousse sur façade",
     },
     {
       title: "J’ai des fuites d’eau ou des traces d’humidité au plafond",
       description:
         "Des infiltrations dans la maison sont souvent le signe d’une toiture endommagée ou mal étanchéifiée. Une intervention rapide permet d’éviter des dégâts plus importants à l’intérieur de votre logement.",
-      image: "/maison_humide.png",
+      image: "/fuite-plafond.png",
       alt: "Humidité sur murs",
     },
     {
       title: "Mes tuiles sont cassées, déplacées ou abîmées",
       description:
         "Des tuiles dégradées exposent votre habitation aux intempéries. Grâce à une rénovation ciblée ou partielle, vous redonnez à votre toit toute sa protection sans refaire toute la toiture.",
-      image: "/facade_abime.png",
+      image: "/tuile_casser.png",
       alt: "Revêtement de façade",
     },
     {
@@ -34,7 +34,7 @@ export default function ToitureBody() {
       title: "Je veux améliorer l’isolation de mon toit",
       description:
         "Une toiture mal isolée peut représenter  jusqu’à 30 % des déperditions thermiques. Avec l’isolation par l’extérieur (sarking) ou l’intérieur, réduisez vos factures et améliorez votre confort toute l’année.",
-      image: "/maison_sale.png",
+      image: "/iso-toiture.png",
       alt: "Façade sale",
     },
   ];

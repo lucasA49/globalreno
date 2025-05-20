@@ -6,21 +6,21 @@ export default function IsolationBody() {
       title: "Ma maison est mal isolée : je ressens le froid ou la chaleur",
       description:
         "Des variations de température importantes dans votre logement ? Cela peut être dû à une isolation dégradée ou insuffisante. Une bonne isolation thermique vous garantit un confort optimal toute l’année, été comme hiver.",
-      image: "/maison_mouse.png",
+      image: "/froid-chaud.png",
       alt: "Mousse sur façade",
     },
     {
       title: "Mes murs présentent des marques d'humidité apparentes",
       description:
         "Des traces d’humidité ou des microfissures apparaissent sur vos murs extérieurs ? Ces signes peuvent révéler un problème structurel plus sérieux. Profitez d’une étude gratuite dès maintenant",
-      image: "/maison_humide.png",
+      image: "/mur-humide.png",
       alt: "Humidité sur murs",
     },
     {
       title: " Mes factures de chauffage ou de climatisation sont trop élevées",
       description:
         "Une isolation inefficace entraîne des pertes d’énergie importantes. Grâce à l’isolation thermique par l’extérieur (ITE) ou des combles, réduisez significativement votre consommation d’énergie et vos dépenses.",
-      image: "/facade_abime.png",
+      image: "/ite.png",
       alt: "Revêtement de façade",
     },
     {
@@ -34,7 +34,7 @@ export default function IsolationBody() {
       title: "Je souhaite isoler mes combles perdus ou aménageables",
       description:
         "Les combles sont responsables de 30 % des déperditions thermiques dans une maison mal isolée. Avec nos solutions performantes, gagnez en confort et réalisez des économies sur le long terme.",
-      image: "/maison_sale.png",
+      image: "/iso-comble.png",
       alt: "Façade sale",
     },
     {
@@ -98,7 +98,7 @@ export default function IsolationBody() {
               <img
                 src={problem.image}
                 alt={problem.alt}
-                className="w-full h-50 object-cover mb-4"
+                className="w-full h-72 object-cover mb-4"
               />
               <p className="text-sm text-gray-700 px-4 mb-4">
                 {problem.description}

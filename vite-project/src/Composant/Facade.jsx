@@ -89,7 +89,7 @@ export default function ToitureBody() {
               <img
                 src={problem.image}
                 alt={problem.alt}
-                className="w-full h-50 object-cover mb-4"
+                className="w-full h-72 object-cover mb-4"
               />
               <p className="text-sm text-gray-700 px-4 mb-4">
                 {problem.description}

@@ -11,7 +11,7 @@ export default function Facade() {
       <div>
         <img
           src="bankdo.png"
-          className="w-full h-full "
+          className="w-full h-auto object-cover"
           alt=""
         />
       </div>

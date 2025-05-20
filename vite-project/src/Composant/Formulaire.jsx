@@ -82,8 +82,8 @@ const ContactForm = () => {
           </p>
           <div className="space-y-2 text-sm text-gray-500">
             <p>📍 20 rue du champ blanc,<br />   49280 Maziere-en-Mauges France</p>
-            <p>📧 contact@aysun.fr</p>
-            <p>📞 07 84 86 45 39</p>
+            <p>📧 globalreno49@gmail.com</p>
+            <p>📞 06 76 25 25 85</p>
           </div>
         </div>
 

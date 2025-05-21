@@ -7,21 +7,35 @@ import Footer from "../Composant/Footer.jsx";
 export default function Home() {
   return (
     <>
+<div className="bg-yellow-400 text-black text-center text-sm md:text-base py-2 px-4 w-full">
+  🎁 Parrainez un proche et recevez <span className="font-bold">500 € en cadeau</span> !
+</div>
+
+
       <Navbar />
 
-      <div>
-        <img 
-          src="baniere-kdo.png"
-         className="w-full  min-h-[300px] max-h-[1000px] object-cover" alt=""/>
-      </div>
+    <div>
+  {/* Image pour ordinateur */}
+  <img 
+    src="baniere-offre.png"
+    alt="Offre Global Reno"
+    className="w-full min-h-[300px] max-h-[1000px] object-cover hidden sm:block"
+  />
 
+  {/* Image pour mobile */}
+  <img 
+    src="/baniere_kdo1_mobile.png"
+    alt="Offre Global Reno mobile"
+    className="w-full min-h-[300px] max-h-[1000px] object-cover block sm:hidden"
+  />
+</div>
       {/* Titre + Logos */}
       <div className="px-4 md:px-20 pt-8 w-full">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <h1 className="text-lg font-semibold mb-4 md:mb-0">
+          <h1 className="text-lg font-semibold  md:mb-0">
             L'expérience Global Reno
           </h1>
-          <div className="flex flex-wrap justify-end gap-2 md:gap-4">
+          <div className="flex flex-wrap justify-end gap-2 mb-5 md:gap-4">
             <img
               src="entreprise-fr.png"
               alt="entreprise-fr"
@@ -43,8 +57,8 @@ export default function Home() {
       </div>
 
       {/* Texte au-dessus du slider */}
-      <div className="flex flex-col md:flex-row justify-around items-center mt-10 gap-6 px-4">
-        <div className="bg-gray-400 rounded-lg p-4 w-full md:w-[40%]">
+      <div className="flex flex-col md:flex-row justify-around items-center   px-4">
+        <div className="bg-gray-400 rounded-lg p-4 w-full md:w-[40%] mb-5">
           <p className="text-sm md:text-base text-justify break-words">
             Chez Global Reno, nous mettons notre savoir-faire au service de
             votre habitat. <br /> Spécialistes de la rénovation de toiture, de façade

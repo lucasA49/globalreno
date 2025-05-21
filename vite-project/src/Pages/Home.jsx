@@ -9,12 +9,21 @@ export default function Home() {
     <>
       <Navbar />
 
-      <div>
-        <img 
-          src="baniere-kdo.png"
-         className="w-full  min-h-[300px] max-h-[1000px] object-cover" alt=""/>
-      </div>
+    <div>
+  {/* Image pour ordinateur */}
+  <img 
+    src="baniere-offre.png"
+    alt="Offre Global Reno"
+    className="w-full min-h-[300px] max-h-[1000px] object-cover hidden sm:block"
+  />
 
+  {/* Image pour mobile */}
+  <img 
+    src="/baniere_kdo1_mobile.png"
+    alt="Offre Global Reno mobile"
+    className="w-full min-h-[300px] max-h-[1000px] object-cover block sm:hidden"
+  />
+</div>
       {/* Titre + Logos */}
       <div className="px-4 md:px-20 pt-8 w-full">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">

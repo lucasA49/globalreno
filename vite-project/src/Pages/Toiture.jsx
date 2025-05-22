@@ -7,6 +7,9 @@ import ImageFacade from "../Composant/SliderToiture.jsx";
 export default function Toiture() {
   return (
     <>
+    <div className="bg-yellow-400 text-black text-center text-sm md:text-base py-2 px-4 w-full">
+  🎁 Parrainez un proche et recevez <span className="font-bold">500 € en cadeau</span> !
+</div>
       <Navbar />
      <div>
   {/* Image pour ordinateur */}

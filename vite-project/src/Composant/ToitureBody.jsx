@@ -24,19 +24,13 @@ export default function ToitureBody() {
       alt: "Revêtement de façade",
     },
     {
-      title: "Je veux repeindre ma façade",
+      title: "Je veux protéger durablement ma toiture avec un traitement hydrofuge",
       description:
-        "Votre façade a perdu de son éclat ou vous souhaitez simplement changer de couleur ? Optez pour un traitement hydrofuge qui redonne vie à votre façade tout en la protégeant durablement.",
-      image: "/maison_peinture.png",
+        "Le traitement hydrofuge permet de protéger votre toit des intempéries, de l’humidité et du vieillissement prématuré. En formant une barrière imperméable, il empêche l’eau de s’infiltrer tout en laissant respirer les matériaux.",
+      image: "/hydrofuge.png",
       alt: "Peinture de façade",
     },
-    {
-      title: "Je veux améliorer l’isolation de mon toit",
-      description:
-        "Une toiture mal isolée peut représenter  jusqu’à 30 % des déperditions thermiques. Avec l’isolation par l’extérieur (sarking) ou l’intérieur, réduisez vos factures et améliorez votre confort toute l’année.",
-      image: "/iso-toiture.png",
-      alt: "Façade sale",
-    },
+
   ];
 
   return (

@@ -27,14 +27,14 @@ export default function IsolationBody() {
       title: "Je veux valoriser mon bien immobilier",
       description:
         "Une maison bien isolée est un vrai atout en cas de revente. Améliorez votre DPE (Diagnostic de Performance Énergétique) et augmentez la valeur de votre bien tout en le rendant plus économe et écologique.",
-      image: "/maison_peinture.png",
+      image: "/dpe.png",
       alt: "Peinture de façade",
     },
     {
-      title: "Je souhaite isoler mes combles perdus ou aménageables",
+      title: "Je souhaite isoler mon logement avec un matériau écologique et performant",
       description:
-        "Les combles sont responsables de 30 % des déperditions thermiques dans une maison mal isolée. Avec nos solutions performantes, gagnez en confort et réalisez des économies sur le long terme.",
-      image: "/iso-comble.png",
+        "La ouate de cellulose est une solution naturelle et efficace pour améliorer l’isolation thermique et acoustique de votre habitation. Fabriquée à partir de papier recyclé, elle est insufflée dans les combles perdus, les murs ou les planchers pour limiter les pertes de chaleur.",
+      image: "/ouate-cellulose.png",
       alt: "Façade sale",
     },
     {
@@ -42,7 +42,7 @@ export default function IsolationBody() {
         "Je ressens des courants d’air ou l’humidité dans certaines pièces",
       description:
         "Des parois froides, des murs humides, ou des zones inconfortables ? Ce sont souvent les signes d’une isolation thermique défaillante. Nos experts identifient les ponts thermiques et vous proposent une solution adaptée.",
-      image: "/maison_sale.png",
+      image: "/froid-maison.png",
       alt: "Façade sale",
     },
   ];

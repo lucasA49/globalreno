@@ -11,6 +11,7 @@ import Isolation from "./Pages/Isolation";
 import Facade from "./Pages/Facade";
 import Devis from "./Pages/Devis";
 import ConditionGene from "./Pages/ConditionsGene";
+import Propos from "./Pages/Propos";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/ConditionsGénérales",
     element: <ConditionGene />,
+  },
+   {
+    path: "/apropos",
+    element: <Propos />,
   },
 ]);
 

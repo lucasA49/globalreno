@@ -21,25 +21,21 @@ const panels = [
     image: "/apres_maison.jpg",
     link: "/isolation",
   },
-  {
-    title: "Fenêtres",
-    description: "Optimisez la lumière naturelle et l’isolation de votre maison.",
-    image: "ultima.png",
-    link: "/fenetres",
-  },
+
 ];
 
 const ImagePanels = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="flex flex-wrap h-auto overflow-hidden">
+    <div className="flex flex-wrap w-full h-auto overflow-hidden">
       {panels.map((panel, index) => (
         <div
           key={index}
-          className={`relative z-[0] w-full sm:w-1/2 md:w-1/4 cursor-pointer transition-all duration-500 ease-in-out transform ${
-            index === activeIndex ? "scale-110" : "scale-100"
-          }`}
+          className={`relative z-[0] w-full sm:w-1/2 md:w-1/3 cursor-pointer transition-all duration-500 ease-in-out transform ${
+  index === activeIndex ? "scale-110" : "scale-100"
+}`}
+
           onClick={() => setActiveIndex(index)}
         >
           {/* Image */}
@@ -57,7 +53,7 @@ const ImagePanels = () => {
 
           {/* Contenu actif avec fond gris et arrondi */}
           {index === activeIndex && (
-            <div className="absolute inset-0 z-30 flex justify-center items-center p-4 sm:p-6">
+            <div className="absolute inset-0 z-30 flex  justify-center items-center p-4 sm:p-6">
               <div className="bg-gray-200 bg-opacity-10 rounded-lg p-4 w-full max-w-xs sm:max-w-md text-gray-500 break-words">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">{panel.title}</h2>
                 <p className="mb-6">{panel.description}</p>

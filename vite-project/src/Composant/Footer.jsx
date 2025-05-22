@@ -9,12 +9,13 @@ export default function Footer() {
           <div className="flex flex-col items-start md:items-start space-y-4 text-center md:text-left">
             <div className="flex items-center">
               <div className="w-1 h-12 bg-green-500 mr-4"></div>
-              <div>
-                <h2 className="text-blue-900 text-3xl font-bold">Global Reno</h2>
-                <p className="text-blue-900 font-medium">
-                  Construire un avenir durable
-                </p>
-              </div>
+          <div className="flex flex-col items-start sm:block">
+  <h2 className="text-blue-900 text-3xl font-bold">Global Reno</h2>
+  <p className="text-blue-900 font-medium">
+    Construire un avenir durable
+  </p>
+</div>
+
             </div>
 
             <div className="flex items-center space-x-2 text-gray-700">
@@ -45,8 +46,8 @@ export default function Footer() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </span>
-              <a href="mailto:test@globalreno.com" className="hover:underline">
-            globalreno49@gmail.com
+              <a href="mailto:Infos.globalreno@gmail.com" className="hover:underline">
+        Infos.globalreno@gmail.com
               </a>
             </div>
           </div>

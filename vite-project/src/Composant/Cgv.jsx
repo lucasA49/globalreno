@@ -10,22 +10,22 @@ export default function Cgv() {
           <p className="text-gray-600">
             <strong>Conditions Générales d'Utilisation (CGU)</strong>
             <br />
-            <strong>Dernière mise à jour :</strong> [Date]
+            <strong>Dernière mise à jour :</strong> 22 Mai 2025
             <br />
             <br />
             Les présentes Conditions Générales d'Utilisation (CGU) régissent
-            l'accès et l'utilisation du site internet [Nom du site], propriété
-            de la société <strong>SASU Global Reno</strong>, ci-après désignée «
+            l'accès et l'utilisation du site internet globalreno-renovation.fr, propriété
+            de la société <strong> SASU Global Reno</strong>, ci-après désignée «
             Global Reno ». En accédant à ce site, vous acceptez sans réserve les
             présentes CGU.
             <br />
             <br />
             <strong>1. Propriété du site</strong>
             <br />
-            Le site internet [Nom du site] est édité et géré par la société{" "}
+            Le site internet globalreno-renovation.fr est édité et géré par la société 
             <strong>SASU Global Reno</strong>, immatriculée au registre du
-            commerce et des sociétés sous le numéro [Numéro SIRET], dont le
-            siège social est situé à [Adresse complète].
+            commerce et des sociétés sous le numéro 98454505300014 , dont le
+            siège social est situé à 20 rue du champ blanc 49280 Mazières-en-Mauges.
             <br />
             Le créateur du site web est la société <strong>GDK Création</strong>
             , faisant partie du groupe <strong>GDK Distribution</strong>.
@@ -44,10 +44,10 @@ export default function Cgv() {
             Tous les contenus présents sur ce site (textes, images, logos,
             graphismes, vidéos, etc.) sont protégés par les droits de propriété
             intellectuelle et sont la propriété exclusive de{" "}
-            <strong>SASU Global Reno</strong> ou de ses partenaires. Toute
+            <strong> SASU Global Reno</strong> ou de ses partenaires. Toute
             reproduction, représentation, diffusion ou utilisation de tout ou
             partie des éléments du site, sous quelque forme que ce soit, sans
-            l'accord préalable écrit de <strong>SASU Global Reno</strong>, est
+            l'accord préalable écrit de <strong> SASU Global Reno </strong>, est
             interdite et peut entraîner des poursuites judiciaires.
             <br />
             <br />
@@ -62,7 +62,7 @@ export default function Cgv() {
             <br />
             <strong>5. Utilisation du site</strong>
             <br />
-            L'accès et l'utilisation du site [Nom du site] sont réservés à un
+            L'accès et l'utilisation du site  globalreno-renovation.fr sont réservés à un
             usage personnel et non commercial. Vous vous engagez à ne pas
             utiliser ce site de manière frauduleuse, illégale ou abusive. Toute
             utilisation non autorisée des contenus du site (notamment la
@@ -75,15 +75,15 @@ export default function Cgv() {
             <strong>SASU Global Reno</strong> s'efforce de fournir sur ce site
             des informations précises et à jour. Cependant, nous ne pouvons
             garantir l'exactitude, l'intégralité ou la mise à jour des
-            informations diffusées sur le site. En aucun cas, la société{" "}
-            <strong>SASU Global Reno</strong> ne saurait être tenue responsable
+            informations diffusées sur le site. En aucun cas, la société
+            <strong> SASU Global Reno</strong> ne saurait être tenue responsable
             des dommages directs ou indirects résultant de l'utilisation du site
             ou de l'impossibilité d'y accéder.
             <br />
             <br />
             <strong>7. Liens externes</strong>
             <br />
-            Le site [Nom du site] peut contenir des liens vers d'autres sites
+            Le site globalreno-renovation.fr peut contenir des liens vers d'autres sites
             web. <strong>SASU Global Reno</strong> ne saurait être tenue
             responsable du contenu de ces sites, ni des conséquences de leur
             utilisation.
@@ -120,15 +120,15 @@ export default function Cgv() {
             <strong>11. Contact</strong>
             <br />
             Pour toute question concernant ces CGU ou l'utilisation du site,
-            vous pouvez contacter <strong>SASU Global Reno</strong> par email à{" "}
-            <strong>[Adresse email de contact]</strong> ou par courrier à
-            l'adresse suivante : [Adresse complète].
+            vous pouvez contacter <strong>SASU Global Reno</strong> par email à
+            <strong> Infos.globalreno@gmail.com</strong> ou par courrier à
+            l'adresse suivante : 20 rue du champ blanc 49280 Mazières-en-Mauges .
             <br />
             <br />
             <strong>12. Utilisation des informations de contact</strong>
             <br />
             En soumettant un formulaire de contact sur ce site, vous acceptez
-            que les informations fournies puissent être utilisées par{" "}
+            que les informations fournies puissent être utilisées par
             <strong>SASU Global Reno</strong> pour prendre contact avec vous.
             Ces informations peuvent également être transmises à des partenaires
             commerciaux de <strong>SASU Global Reno</strong> dans le cadre de
@@ -140,9 +140,9 @@ export default function Cgv() {
 
           <div className="space-y-2 text-sm text-gray-500">
             <p>Les condition générales d'utilisation du site web global</p>
-            <p>📧 globalreno49@gmail.com</p>
-            <a href="tel:+33676252585" className="hover:underline">
-              📞 06 76 25 25 85
+            <p>📧 Infos.globalreno@gmail.com</p>
+            <a href="tel:+33784864539" className="hover:underline">
+              📞 07 84 86 45 39
             </a>
           </div>
         </div>

@@ -3,10 +3,24 @@ import ImagePanels from "../Composant/HomeSlider.jsx";
 import HomeSlider from "../Composant/CompareImg.jsx";
 import Carousel from "../Composant/Carousel.jsx";
 import Footer from "../Composant/Footer.jsx";
-
+import { Helmet } from "react-helmet";
 export default function Home() {
   return (
     <>
+    <Helmet>
+  <title>Global Réno | Rénovation écologique toiture, façade et isolation</title>
+  <meta 
+    name="description" 
+    content="Global Réno, spécialiste de la rénovation écologique dans le Grand Ouest : toiture, façade, isolation extérieure et combles. Devis gratuit et certification RGE." 
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Global Réno | Rénovation toiture, façade, isolation" />
+  <meta property="og:description" content="Faites confiance à Global Réno pour des rénovations durables et certifiées RGE dans le Grand Ouest. Toiture, façade, isolation thermique." />
+  <meta property="og:image" content="https://globalreno-renovation.fr/baniere-offre.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://globalreno-renovation.fr/" />
+  <link rel="canonical" href="https://globalreno-renovation.fr/" />
+</Helmet>
 <div className="bg-yellow-400 text-black text-center text-sm md:text-base py-2 px-4 w-full">
   🎁 Parrainez un proche et recevez <span className="font-bold">500 € en cadeau</span> !
 </div>

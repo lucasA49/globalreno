@@ -6,19 +6,19 @@ const panels = [
     title: "Toiture",
     description:
       "Redonnez une seconde jeunesse à vos tuiles et ardoises grâce aux produits exclusifs de Technitoit, le spécialiste de la toiture en France.",
-    image: "rge.png",
+    image: "Toitureimg.png",
     link: "/toiture",
   },
   {
     title: "Façade",
     description: "Protégez et embellissez votre façade avec nos solutions durables.",
-    image: "fabrication-francaise.png",
+    image: "facadeimg.png",
     link: "/facade",
   },
   {
     title: "Isolation",
     description: "Améliorez votre confort thermique et réalisez des économies d’énergie.",
-    image: "/apres_maison.jpg",
+    image: "/isoimg.png",
     link: "/isolation",
   },
 

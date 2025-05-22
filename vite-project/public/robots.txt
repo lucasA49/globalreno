@@ -1,4 +1,3 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://globalreno-renovation.fr//sitemap.xml
+User-agent: *           → s’applique à tous les moteurs de recherche (Google, Bing, etc.)
+Disallow:               → vide, donc aucune page n’est bloquée à l’indexation
+Sitemap: ...            → indique à Google où trouver ton sitemap.xml

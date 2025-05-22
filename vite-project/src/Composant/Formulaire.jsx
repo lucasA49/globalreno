@@ -43,7 +43,7 @@ const ContactForm = () => {
     const serviceId = 'service_ytmnquu';
 
     sendFeedback(serviceId, templateId, {
-      to_email: "lucas.ak49@hotmail.com",
+      to_email: "Infos.globalreno@gmail.com",
       name: data.name,
       phone: data.phone,
       email: data.email,
@@ -82,8 +82,8 @@ const ContactForm = () => {
           </p>
           <div className="space-y-2 text-sm text-gray-500">
             <p>📍 20 rue du champ blanc,<br />   49280 Maziere-en-Mauges France</p>
-            <p>📧 globalreno49@gmail.com</p>
-            <p>📞 06 76 25 25 85</p>
+            <p>📧 Infos.globalreno@gmail.com</p>
+            <p>📞 07 84 86 45 39</p>
           </div>
         </div>
 

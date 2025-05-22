@@ -27,19 +27,7 @@ export default function Isolation() {
 </div>
       <Navbar />
         <div>
-  {/* Image pour ordinateur */}
-  <img 
-    src="baniere-offre.png"
-    alt="Offre Global Reno"
-    className="w-full min-h-[300px] max-h-[1000px] object-cover hidden sm:block"
-  />
 
-  {/* Image pour mobile */}
-  <img 
-    src="/baniere_kdo1_mobile.png"
-    alt="Offre Global Reno mobile"
-    className="w-full min-h-[300px] max-h-[1000px] object-cover block sm:hidden"
-  />
 </div>
       <IsolationBody />
 <div className="w-full flex flex-col md:flex-row items-center justify-center gap-4 p-4">    

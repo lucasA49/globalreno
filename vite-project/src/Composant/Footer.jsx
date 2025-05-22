@@ -45,8 +45,8 @@ export default function Footer() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </span>
-              <a href="mailto:test@globalreno.com" className="hover:underline">
-            globalreno49@gmail.com
+              <a href="mailto:Infos.globalreno@gmail.com" className="hover:underline">
+        Infos.globalreno@gmail.com
               </a>
             </div>
           </div>

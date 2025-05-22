@@ -13,23 +13,7 @@ export default function Propos() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Bannière d’image */}
-      <div>
-        {/* Image pour ordinateur */}
-        <img
-          src="baniere-offre.png"
-          alt="Offre Global Reno"
-          className="w-full min-h-[300px] max-h-[1000px] object-cover hidden sm:block"
-        />
-
-        {/* Image pour mobile */}
-        <img
-          src="/baniere_kdo1_mobile.png"
-          alt="Offre Global Reno mobile"
-          className="w-full min-h-[300px] max-h-[1000px] object-cover block sm:hidden"
-        />
-      </div>
-
+ 
       {/* Description entreprise */}
       <div className="flex justify-center items-center px-4 py-16 min-h-[60vh]">
         <div className="bg-gray-400 rounded-lg p-6 w-full sm:w-11/12 md:w-3/4 lg:w-1/2">

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
 <div className="bg-yellow-400 text-black text-center text-sm md:text-base py-2 px-4 w-full">
-  🎁 Parrainez un proche et recevez <span className="font-bold">500 € en cadeau</span> !
+  🎁 Parrainez un proche et recevez <span className="font-bold">500 € en cadeau</span> !
 </div>
 
 
@@ -47,11 +47,7 @@ export default function Home() {
               className="h-10 md:h-16 w-auto"
             />
             <img src="rge.png" alt="logo_rge" className="h-10 md:h-16 w-auto" />
-            <img
-              src="fabrication-francaise.png"
-              alt="fabrication-francaise"
-              className="h-10 md:h-16 w-auto"
-            />
+     
           </div>
         </div>
       </div>

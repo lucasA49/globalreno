@@ -70,7 +70,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-1">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/apropos" className="hover:underline">
                   À propos de Global Reno
                 </a>
               </li>

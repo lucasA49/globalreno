@@ -7,8 +7,6 @@ export default function Carousel() {
         <div className="flex gap-6 md:justify-center md:gap-10 h-[20vh] md:h-[20vh] min-w-max">
           <img src="/jefco.webp" alt="jefco" className="h-32 md:h-48 flex-shrink-0" />
           <img src="/seigneurie.png" alt="seigneurie" className="h-32 md:h-48 flex-shrink-0" />
-          <img src="/ultima.png" alt="ultima" className="h-32 md:h-48 flex-shrink-0" />
-          <img src="/gdk.jpg" alt="gdk" className="h-32 md:h-48 flex-shrink-0" />
         </div>
       </div>
     </div>

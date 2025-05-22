@@ -6,35 +6,35 @@ export default function ToitureBody() {
       title: "Ma façade présente des traces de mousse",
       description:
         "Des mousses ou des traces de verdissure apparaissent sur votre façade ? Ne laissez pas la situation se dégrader : optez dès maintenant pour un démoussage efficace de votre façade.",
-      image: "/maison_mouse.png",
+      image: "/mouse-maison.png",
       alt: "Mousse sur façade",
     },
     {
       title: "Mes murs présentent des marques d'humidité apparentes",
       description:
         "Des traces d’humidité ou des microfissures apparaissent sur vos murs extérieurs ? Ces signes peuvent révéler un problème structurel plus sérieux. Profitez d’une étude gratuite dès maintenant",
-      image: "/maison_humide.png",
+      image: "/facade-humide.png",
       alt: "Humidité sur murs",
     },
     {
       title: "Je souhaite remplacer le revêtement de ma façade",
       description:
         "Votre enduit montre des signes d’usure ? Vos murs présentent des irrégularités que vous aimeriez corriger ? Global Reno vous propose des solutions sur mesure pour un revêtement de façade esthétique et durable.",
-      image: "/facade_abime.png",
+      image: "/facade-arefaire.png",
       alt: "Revêtement de façade",
     },
     {
       title: "Je veux repeindre ma façade",
       description:
         "Votre façade a perdu de son éclat ou vous souhaitez simplement changer de couleur ? Optez pour un traitement hydrofuge qui redonne vie à votre façade tout en la protégeant durablement.",
-      image: "/maison_peinture.png",
+      image: "/peinture-facade.png",
       alt: "Peinture de façade",
     },
     {
       title: "Ma façade est sale",
       description:
         "Des traces de salissures ou de pollution apparaissent sur vos murs extérieurs ? Offrez à votre façade un nettoyage complet pour lui redonner tout son éclat.",
-      image: "/maison_sale.png",
+      image: "/facade-salle.png",
       alt: "Façade sale",
     },
   ];

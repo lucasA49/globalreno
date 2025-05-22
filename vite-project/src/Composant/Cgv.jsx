@@ -121,7 +121,7 @@ export default function Cgv() {
             <br />
             Pour toute question concernant ces CGU ou l'utilisation du site,
             vous pouvez contacter <strong>SASU Global Reno</strong> par email à
-            <strong>Infos.globalreno@gmail.com</strong> ou par courrier à
+            <strong> Infos.globalreno@gmail.com</strong> ou par courrier à
             l'adresse suivante : 20 rue du champ blanc 49280 Mazières-en-Mauges .
             <br />
             <br />

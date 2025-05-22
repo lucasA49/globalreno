@@ -9,12 +9,13 @@ export default function Footer() {
           <div className="flex flex-col items-start md:items-start space-y-4 text-center md:text-left">
             <div className="flex items-center">
               <div className="w-1 h-12 bg-green-500 mr-4"></div>
-              <div>
-                <h2 className="text-blue-900 text-3xl font-bold">Global Reno</h2>
-                <p className="text-blue-900 font-medium">
-                  Construire un avenir durable
-                </p>
-              </div>
+          <div className="flex flex-col items-start sm:block">
+  <h2 className="text-blue-900 text-3xl font-bold">Global Reno</h2>
+  <p className="text-blue-900 font-medium">
+    Construire un avenir durable
+  </p>
+</div>
+
             </div>
 
             <div className="flex items-center space-x-2 text-gray-700">

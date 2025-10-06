@@ -4,6 +4,8 @@ import HomeSlider from "../Composant/CompareImg.jsx";
 import Carousel from "../Composant/Carousel.jsx";
 import Footer from "../Composant/Footer.jsx";
 import { Helmet } from "react-helmet";
+import LatestArticles from '../Composant/LatestsArticles';
+
 export default function Home() {
   return (
     <>
@@ -95,6 +97,7 @@ export default function Home() {
         </h2>
         <ImagePanels />
       </div>
+<LatestArticles />
 
       <div>
         <Carousel />

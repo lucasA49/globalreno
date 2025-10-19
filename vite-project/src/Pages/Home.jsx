@@ -23,9 +23,7 @@ export default function Home() {
   <meta property="og:url" content="https://globalreno-renovation.fr/" />
   <link rel="canonical" href="https://globalreno-renovation.fr/" />
 </Helmet>
-<div className="bg-yellow-400 text-black text-center text-sm md:text-base py-2 px-4 w-full">
-  🎁 Parrainez un proche et recevez <span className="font-bold">500 € en cadeau</span> !
-</div>
+
 
 
       <Navbar />

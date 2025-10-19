@@ -27,8 +27,7 @@ app.use('/api/analytics', analyticsRoutes);
 app.get('/', (req, res) => {
   res.json({ message: 'Bienvenue sur l\'API GlobalReno' });
 });
-
 // Démarrage du serveur
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`✅ Serveur démarré sur le port ${PORT}`);
 });

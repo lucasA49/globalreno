@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext';
+const api = import.meta.env.VITE_API_URL;
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -17,10 +18,20 @@ const Login = () => {
     setLoading(true);
 
     try {
+      // 🔥 on utilise directement l'API ici
+      const res = await fetch(`${api}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Erreur de connexion");
+
       await login(email, password);
       navigate('/admin/dashboard');
     } catch (err) {
-      setError(err.response?.data?.message || 'Erreur de connexion. Vérifiez vos identifiants.');
+      setError(err.message || 'Erreur de connexion. Vérifiez vos identifiants.');
     } finally {
       setLoading(false);
     }
@@ -29,22 +40,18 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4">
       <div className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Connexion Admin</h1>
           <p className="text-gray-600 text-sm">Accédez au tableau de bord</p>
         </div>
 
-        {/* Message d'erreur */}
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6 text-sm">
             {error}
           </div>
         )}
 
-        {/* Formulaire */}
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Email */}
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
               Email
@@ -60,7 +67,6 @@ const Login = () => {
             />
           </div>
 
-          {/* Mot de passe */}
           <div>
             <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
               Mot de passe
@@ -76,7 +82,6 @@ const Login = () => {
             />
           </div>
 
-          {/* Bouton */}
           <button
             type="submit"
             disabled={loading}

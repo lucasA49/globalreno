@@ -5,7 +5,7 @@ const panels = [
   {
     title: "Toiture",
     description:
-      "Redonnez une seconde jeunesse à vos tuiles et ardoises grâce aux produits exclusifs de Technitoit, le spécialiste de la toiture en France.",
+      "Redonnez une seconde jeunesse à vos tuiles et ardoises grâce a nos produits exclusifs.",
     image: "Toitureimg.png",
     link: "/toiture",
   },

@@ -6,8 +6,8 @@ function SliderIsolation() {
  <div className="w-full max-w-[600px] sm:min-w-[300px]">
 
       <CompareImage
-        leftImage="/avant_facade.png"
-        rightImage="/apres_facade.png"
+        leftImage="/avant_ite.png"
+        rightImage="/apres_ite.png"
         sliderLineColor="#fff"
       />
     </div>

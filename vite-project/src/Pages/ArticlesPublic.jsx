@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import api from '../services/api';
-import Navbar from '../Composant/Navbar';
-import Footer from '../Composant/Footer';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import api from "../services/api";
+import Navbar from "../Composant/Navbar";
+import Footer from "../Composant/Footer";
 
 const ArticlesPublic = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
     fetchArticles();
@@ -15,20 +15,23 @@ const ArticlesPublic = () => {
 
   const fetchArticles = async () => {
     try {
-      const response = await api.get('/articles');
+      const response = await api.get("/articles");
       // Filtrer seulement les articles publiés
-      const publishedArticles = response.data.filter(article => article.status === 'publie');
+      const publishedArticles = response.data.filter(
+        (article) => article.status === "publie"
+      );
       setArticles(publishedArticles);
     } catch (error) {
-      console.error('Erreur lors du chargement des articles', error);
+      console.error("Erreur lors du chargement des articles", error);
     } finally {
       setLoading(false);
     }
   };
 
-  const filteredArticles = filter === 'all' 
-    ? articles 
-    : articles.filter(article => article.categorie === filter);
+  const filteredArticles =
+    filter === "all"
+      ? articles
+      : articles.filter((article) => article.categorie === filter);
 
   if (loading) {
     return (
@@ -41,7 +44,7 @@ const ArticlesPublic = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-500 to-green-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,41 +59,41 @@ const ArticlesPublic = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap gap-4 justify-center mb-8">
           <button
-            onClick={() => setFilter('all')}
+            onClick={() => setFilter("all")}
             className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              filter === 'all'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+              filter === "all"
+                ? "bg-green-500 text-white shadow-lg"
+                : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
             Tous
           </button>
           <button
-            onClick={() => setFilter('toiture')}
+            onClick={() => setFilter("toiture")}
             className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              filter === 'toiture'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+              filter === "toiture"
+                ? "bg-green-500 text-white shadow-lg"
+                : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
             Toiture
           </button>
           <button
-            onClick={() => setFilter('isolation')}
+            onClick={() => setFilter("isolation")}
             className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              filter === 'isolation'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+              filter === "isolation"
+                ? "bg-green-500 text-white shadow-lg"
+                : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
             Isolation
           </button>
           <button
-            onClick={() => setFilter('facade')}
+            onClick={() => setFilter("facade")}
             className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              filter === 'facade'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+              filter === "facade"
+                ? "bg-green-500 text-white shadow-lg"
+                : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
             Façade
@@ -100,7 +103,9 @@ const ArticlesPublic = () => {
         {/* Liste des articles */}
         {filteredArticles.length === 0 ? (
           <div className="text-center py-16">
-            <p className="text-xl text-gray-600">Aucun article disponible pour le moment</p>
+            <p className="text-xl text-gray-600">
+              Aucun article disponible pour le moment
+            </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -139,11 +144,14 @@ const ArticlesPublic = () => {
 
                   {/* Date */}
                   <p className="text-sm text-gray-500 mb-4">
-                    {new Date(article.date_creation).toLocaleDateString('fr-FR', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                    {new Date(article.date_creation).toLocaleDateString(
+                      "fr-FR",
+                      {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      }
+                    )}
                   </p>
 
                   {/* Bouton Lire plus */}

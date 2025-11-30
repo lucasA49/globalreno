@@ -6,8 +6,8 @@ function SliderToiture() {
   <div className="w-full max-w-[600px] sm:min-w-[300px]">
 
       <CompareImage
-        leftImage="/avant_facade.png"
-        rightImage="/apres_facade.png"
+        leftImage="/avant_toit.png"
+        rightImage="/apres_toit.png"
         sliderLineColor="#fff"
       />
     </div>

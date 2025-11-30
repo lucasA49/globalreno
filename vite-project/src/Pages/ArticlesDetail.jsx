@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import api from '../services/api';
-import Navbar from '../Composant/Navbar';
-import Footer from '../Composant/Footer';
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import api from "../services/api";
+import Navbar from "../Composant/Navbar";
+import Footer from "../Composant/Footer";
 
 const ArticleDetail = () => {
   const [article, setArticle] = useState(null);
@@ -17,14 +17,14 @@ const ArticleDetail = () => {
   const fetchArticle = async () => {
     try {
       const response = await api.get(`/articles/${id}`);
-      if (response.data.status !== 'publie') {
-        navigate('/articles');
+      if (response.data.status !== "publie") {
+        navigate("/articles");
         return;
       }
       setArticle(response.data);
     } catch (error) {
-      console.error('Erreur lors du chargement de l\'article', error);
-      navigate('/articles');
+      console.error("Erreur lors du chargement de l'article", error);
+      navigate("/articles");
     } finally {
       setLoading(false);
     }
@@ -60,7 +60,7 @@ const ArticleDetail = () => {
       {/* Contenu de l'article */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <button
-          onClick={() => navigate('/articles')}
+          onClick={() => navigate("/articles")}
           className="text-green-600 hover:text-green-700 font-semibold mb-6 inline-flex items-center"
         >
           ← Retour aux articles
@@ -80,10 +80,11 @@ const ArticleDetail = () => {
 
         {/* Date */}
         <p className="text-gray-500 mb-8">
-          Publié le {new Date(article.date_creation).toLocaleDateString('fr-FR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+          Publié le{" "}
+          {new Date(article.date_creation).toLocaleDateString("fr-FR", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
           })}
         </p>
 
@@ -100,10 +101,11 @@ const ArticleDetail = () => {
             Besoin de nos services ?
           </h3>
           <p className="text-gray-600 mb-4">
-            Contactez-nous pour obtenir un devis gratuit pour votre projet de rénovation.
+            Contactez-nous pour obtenir un devis gratuit pour votre projet de
+            rénovation.
           </p>
           <button
-            onClick={() => navigate('/Contact')}
+            onClick={() => navigate("/Contact")}
             className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-full transition-colors"
           >
             Demander un devis

@@ -40,16 +40,16 @@ export default function Home() {
       <div>
         {/* Image pour ordinateur */}
         <img
-          src="baniere-offre.png"
+          src="banner_global.png"
           alt="Offre Global Reno"
-          className="w-full min-h-[300px] max-h-[1000px] object-cover hidden sm:block"
+          className="w-full min-h-[300px] max-h-[750px] object-cover hidden sm:block"
         />
 
         {/* Image pour mobile */}
         <img
-          src="/baniere_kdo1_mobile.png"
+          src="/banner_min_global.png"
           alt="Offre Global Reno mobile"
-          className="w-full min-h-[300px] max-h-[1000px] object-cover block sm:hidden"
+          className="w-full min-h-[300px]  max-h-[650px] object-cover block sm:hidden"
         />
       </div>
       {/* Titre + Logos */}
